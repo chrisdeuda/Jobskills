@@ -1,0 +1,163 @@
+
+/*search button*/
+#search_button{
+	margin-right: 60px;
+}
+/*sign in form*/
+#job_vacany_post{
+	margin: auto;
+	width: 1200px;
+
+}
+/*content container*/
+#content_container{
+	margin:auto;
+	width: 1200px;
+}
+/*form signin*/
+#sign_in{
+	margin-left: 10px;
+	height: 400px;
+	width: 450px;
+	background-color: #eeebeb;
+	border-radius: 20px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	-moz-box-shadow: 0 0 15px black;
+	 -webkit-box-shadow: 0 0 15px black;
+	  box-shadow: 0 0 15px black; 
+}
+
+h1.sign_text{ /*words na sign in*/
+	padding: 30px;
+	color:#3f3f3f;
+	font-size: 50px;
+	font-family: lato;
+	font-weight: bold;
+}
+input#sign_text{ /*textbox ng sign in*/
+	margin: 20px;
+	width: 400px;
+	height: 50px;
+	font-family: lato;
+	font-size: 30px;
+
+}
+input#pass_text{ /*textbox ng password*/
+	margin: 20px;
+	width: 400px;
+	height: 50px;
+	font-family: lato;
+	font-size: 30px;
+
+}
+
+.login_button{ /*button ng login*/
+	background-color:  #828282;
+	width: 150px;
+	font-family: lato;
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
+
+}
+#check_login{
+	float: right;
+	margin-right: 20px;
+	margin-top: -10px;
+}
+#checkbox{ /*checkbox*/
+	font-size: 15px;
+	font-family: lato;
+	font-weight: bold;
+	color: #3f3f3f;
+
+
+
+}
+/*welcome section*/
+#welcome_container{
+	margin-top: -10px;
+	margin-left: 110px;
+}
+#welcome_text{
+	margin-left: 70px;
+	font-family: lato;
+	font-size: 100px;
+	font-weight: bold;
+	color:  #4FC1E9;
+}
+#content_welcome{
+	font-size: 10px;
+	font-family: lato;
+	color:black;
+	text-align: justify;
+}
+/*not yet register section*/
+#not_registered_container{
+	border: 2px solid  #4FC1E9;
+	height: 140px;
+}
+#not_registered_text{
+	font-size: 30px;
+	font-family: lato;
+	font-weight: bold;
+	color:#3f3f3f;
+	margin-left: 20px;
+}
+.register_button{ /*button ng register now*/
+	margin-top: 10px;
+	margin-left:100px;
+	background-color: #828282;
+	width: 400px;
+	height: 70px;
+	font-family: lato;
+	font-size: 40px;
+	color:white;
+	text-align: center;
+
+}
+/*register link*/
+.register_text:visited{
+	color: white;
+	text-decoration: none;
+}
+.register_text:hover{
+	color: black;
+	text-decoration: none;
+
+}
+
+.register_text:active{
+	color: black;
+	text-decoration: none;
+}
+/*footer*/
+#footer{
+	margin: auto;
+	width: 1200px;
+	height: 190px;
+	background-color:#656d78;
+}
+
+.description_text{
+	font-family: lato;
+	font-size: 10px;
+	color: black;
+
+}
+.description_text:hover{
+	color: black;
+}
+.description_text:visited{
+	color: black;
+}
+.help_text:visited{
+	color: black;
+	text-decoration: none;
+}
+.help_text:hover{
+	color: black;
+	text-decoration: none;
+
+}

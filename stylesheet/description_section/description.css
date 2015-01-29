@@ -1,0 +1,192 @@
+/* the IDs are for divs
+ 	and the Classes are for other elements */
+
+/* for the whole page */
+#page
+{
+	/*border: 1px solid black;*/
+	width: 750px;
+	height: 400px;
+}
+
+/* for the content*/
+#content
+{
+	/*border: 1px solid black;*/
+	height: 350px;
+}
+ /* for the jobskills */
+#logo
+{
+	/*border: 1px solid black;*/
+	width: 750px;
+	padding-top: 30px;
+}
+
+
+
+
+#info
+{
+	/*border: 1px solid black;*/
+	float: left;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	background-color: #F4E8F0;
+}
+
+#pen-tool
+{
+	/*border: 1px solid black;*/
+	float: right;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	background-color: #F4E8F0;
+}
+
+#graph
+{
+	/*border: 1px solid black;*/
+	float: left;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	background-color: #F4E8F0;
+}
+
+#book
+{
+	/*border: 1px solid black;*/
+	float: right;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	background-color: #F4E8F0;
+}
+
+
+
+#info_padding
+{
+	/*border: 1px solid black;*/
+	float: left;
+	width: 326px;
+	height: 100px;
+	padding-top: 40px;
+	padding-left: 20px;
+	padding-bottom: 20px;
+}
+
+#pentool_padding
+{
+	/*border: 1px solid black;*/
+	float: right;
+	width: 326px;
+	height: 100px;
+	padding-top: 40px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+#graph_padding
+{
+	/*border: 1px solid black;*/
+	float: left;
+	width: 326px;
+	height: 100px;
+	padding-top: 40px;
+	padding-left: 20px;
+	padding-bottom: 20px;
+}
+
+#book_padding
+{
+	/*border: 1px solid black;*/
+	float: right;
+	width: 326px;
+	height: 100px;
+	padding-top: 40px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+
+/* div inside the info */
+#info_img
+{
+	/*border: 1px solid black;*/
+	float: left;
+}
+
+#info_p
+{
+	/*border: 1px solid black;*/
+	float: right;
+	width: 210px;
+}
+/* end of div inside the info */
+
+/* div inside the pen-tool */
+#pentool_img
+{
+	/*border: 1px solid black;*/
+	float: left;
+}
+
+#pentool_p
+{
+	/*border: 1px solid black;*/
+	float: right;
+	width: 210px;
+}
+/* end of div inside the pentool */
+
+/* div inside the graph */
+#graph_img
+{
+	/*border: 1px solid black;*/
+	float: left;
+}
+
+#graph_p
+{
+	/*border: 1px solid black;*/
+	float: right;
+	width: 210px;
+}
+/* end of div inside the graph*/
+
+/* div inside the book */
+#book_img
+{
+	/*border: 1px solid black;*/
+	float: left;
+}
+
+#book_p
+{
+	/*border: 1px solid black;*/
+	float: right;
+	width: 210px;
+}
+/* end of div inside the book */
+
+
+/*classes*/
+.logo
+{
+	height: 50px;
+	width: 300px;
+}
+
+.logo1
+{
+	height: 80px;
+	width: 80px;
+}

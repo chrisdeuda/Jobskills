@@ -1,0 +1,113 @@
+#main-container{
+	max-width: 1400px;
+	margin: auto;
+}
+
+/*profile image*/
+#prof_picture{
+	width: 1200px;
+	height: 200px;
+	border: 1px solid black;
+	
+}
+/*container ng profile pictire*/
+#prof_pic{
+	width: 1250px;
+	margin: auto;
+	text-align: center;    
+	margin: auto;
+	
+
+}
+/*first box*/
+#com_details{
+	width: 500px;
+	height: 350px;
+	margin-left: 120px;
+	border: 1px solid black;
+	border-radius: 20px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	
+
+}
+/*second box*/
+#hr_list{
+	width: 100px;
+	height: 300px;
+	margin-left: 120px;
+	border: 1px solid black;
+	border-radius: 20px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	
+}
+
+
+p{
+
+	font-size: 20px;
+	font-family: lato;
+
+}
+
+#add-hr-btn{
+	display: block;
+	text-align: center;
+
+}
+
+.add_hr_button{
+	background-color:#19b5fe;
+	color: white;
+	font-size: 30px;
+	width: 200px;
+	height: 45px;
+	font-family: Lato;
+	margin-left: 150px;
+}
+.add_hr_button:hover{
+	background-color:  #4FC1E9;
+}
+#warning_sign{
+	margin-left: 80px;
+	width: 350px;
+	background-color: #eeebeb;
+	height: 20px;
+	font-size: 15px;
+	font-family: lato;
+}
+#job_list{
+	width: 500px;
+	height: 200px;
+	margin-left: 100px;
+	margin-top: -150px;
+	border: 1px solid black;
+	border-radius: 20px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+}
+#warning_sign_post{
+	margin-left: 40px;
+	width: 420px;
+	background-color: #eeebeb;
+	height: 20px;
+	font-size: 15px;
+	font-family: lato;
+}
+/*post job button*/
+#text_post_job:visited{
+	color: white;
+	text-decoration: none;
+}
+#text_post_job:hover{
+	color: white;
+	text-decoration: none;
+
+}
+
+#text_post_job:active{
+	color: white;
+	text-decoration: none;
+}
+/*add hr*/

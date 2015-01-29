@@ -1,0 +1,335 @@
+#content_container{
+	margin: auto;
+	width: 1400px;
+}
+/*minute ago*/
+#one_minute{
+	margin-top: -20px;
+	margin-left: 100px;
+	font-family: lato;
+	font-size: 15px;
+	font-weight: bold;
+	color: black;
+}
+/*first section*/
+#job_vacancy_post{
+	margin: auto;
+	width: 1200px;
+}
+#first_post{   /*design ng 1st job post*/
+	margin-top: 10px;
+	margin-left: 100px;
+	width: 250px;
+	height: 250px;
+	background-color: #eeebeb;
+	border-radius: 20px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border:1px solid #989393;
+	
+
+	
+
+}
+#first_post:hover{ /*design ng shadow 1st job post*/
+
+	-moz-box-shadow: 0 0 20px black;
+	 -webkit-box-shadow: 0 0 20px black;
+	  box-shadow: 0 0 20px black; 
+}
+img.company1{ /*image ng 1st job post*/
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	display: block;
+}
+#company_description1{ /*description ng 1st job post*/
+	margin-top: 5px;
+	margin-left:20px;
+	font-family: lato;
+	font-size: 12px;
+	color: black;
+
+}
+
+#second_post{ /*design ng 2nd job post*/
+	margin-top: 10px;
+	margin-left: 50px;
+	width: 250px;
+	height: 250px;
+	background-color: #eeebeb;
+	border-radius: 20px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border:1px solid #989393;
+}
+#second_post:hover{ /* shadow ng box ng 2nd job post*/
+
+	-moz-box-shadow: 0 0 20px black;
+	 -webkit-box-shadow: 0 0 20px black;
+	  box-shadow: 0 0 20px black; 
+}
+img.company2{ /*image ng 2nd job post*/
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	display: block;
+}
+#company_description2{ /*description ng 2nd job post*/
+	margin-top: 5px;
+	margin-left:20px;
+	font-family: lato;
+	font-size: 12px;
+	color: black;
+
+}
+
+
+#third_post{ /*design ng 3rd job post*/
+	margin-top: 10px;
+	margin-left: 50px;
+	width: 250px;
+	height: 250px;
+	background-color: #eeebeb;
+	border-radius: 20px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border:1px solid #989393;
+	
+}
+#third_post:hover{ /*shadow ng box ng 3rd job post*/
+
+	-moz-box-shadow: 0 0 20px black;
+	 -webkit-box-shadow: 0 0 20px black;
+	  box-shadow: 0 0 20px black; 
+}
+img.company3{ /*image ng 3rd job post*/
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	display: block;
+}
+#company_description3{ /*description ng 3rd job post*/
+	margin-top: 5px;
+	margin-left:20px;
+	font-family: lato;
+	font-size: 12px;
+	color: black;
+
+}
+
+#forth_post{ /*design ng 4th job post*/
+	margin-top: 10px;
+	margin-left: 50px;
+	width: 250px;
+	height: 250px;
+	background-color: #eeebeb;
+	border-radius: 20px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border:1px solid #989393;
+	
+}
+#forth_post:hover{ /*shadow ng box ng 4thjob post*/
+
+	-moz-box-shadow: 0 0 20px black;
+	 -webkit-box-shadow: 0 0 20px black;
+	  box-shadow: 0 0 20px black; 
+}
+img.company4{ /*image ng 3rd job post*/
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	display: block;
+}
+#company_description4{ /*description ng 4th job post*/
+	margin-top: 5px;
+	margin-left:20px;
+	font-family: lato;
+	font-size: 12px;
+	color: black;
+
+}
+/*View more hyperlink*/
+#view_more_hyperlink{
+	font-family: lato;
+	font-size: 20px;
+	float: right;
+	margin-right: 150px;
+}
+.view_button{
+
+	width:140px;
+	height:40px;
+	line-height: 10px;
+	color: white;
+	font-family: lato;
+	font-size: 20px;
+	background-color: #19b5fe;
+	text-decoration: none;
+}
+.view_button:hover{
+	background-color:  #4FC1E9;
+}
+.view_more{
+	color: white;
+	text-decoration: none;
+}
+.view_more:hover{
+	color:white;
+	text-decoration: none;
+}
+/*view more toggle*/
+#view_toggle{
+	width: 1200px;
+	height: 600px;
+	margin: auto;
+	
+	display: none;
+
+}
+/*view more toggle content*/
+#one_minute1{
+	margin-top: -20px;
+	
+	font-family: lato;
+	font-size: 15px;
+	font-weight: bold;
+	color: black;
+}
+/*first section*/
+
+#first_post1{   /*design ng 1st job post*/
+	margin-top: 10px;
+	margin-left:0px;
+	width: 250px;
+	height: 250px;
+	background-color: #eeebeb;
+	border-radius: 20px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border:1px solid #989393;
+	
+
+	
+
+}
+#first_post1:hover{ /*design ng shadow 1st job post*/
+
+	-moz-box-shadow: 0 0 20px black;
+	 -webkit-box-shadow: 0 0 20px black;
+	  box-shadow: 0 0 20px black; 
+}
+img.company1{ /*image ng 1st job post*/
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	display: block;
+}
+#company_description1{ /*description ng 1st job post*/
+	margin-top: 5px;
+	margin-left:20px;
+	font-family: lato;
+	font-size: 12px;
+	color: black;
+
+}
+
+#second_post1{ /*design ng 2nd job post*/
+	margin-top: 10px;
+	margin-left: 50px;
+	width: 250px;
+	height: 250px;
+	background-color: #eeebeb;
+	border-radius: 20px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border:1px solid #989393;
+}
+#second_post1:hover{ /* shadow ng box ng 2nd job post*/
+
+	-moz-box-shadow: 0 0 20px black;
+	 -webkit-box-shadow: 0 0 20px black;
+	  box-shadow: 0 0 20px black; 
+}
+img.company2{ /*image ng 2nd job post*/
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	display: block;
+}
+#company_description2{ /*description ng 2nd job post*/
+	margin-top: 5px;
+	margin-left:20px;
+	font-family: lato;
+	font-size: 12px;
+	color: black;
+
+}
+
+
+#third_post1{ /*design ng 3rd job post*/
+	margin-top: 10px;
+	margin-left: 50px;
+	width: 250px;
+	height: 250px;
+	background-color: #eeebeb;
+	border-radius: 20px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border:1px solid #989393;
+	
+}
+#third_post1:hover{ /*shadow ng box ng 3rd job post*/
+
+	-moz-box-shadow: 0 0 20px black;
+	 -webkit-box-shadow: 0 0 20px black;
+	  box-shadow: 0 0 20px black; 
+}
+img.company3{ /*image ng 3rd job post*/
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	display: block;
+}
+#company_description3{ /*description ng 3rd job post*/
+	margin-top: 5px;
+	margin-left:20px;
+	font-family: lato;
+	font-size: 12px;
+	color: black;
+
+}
+
+#forth_post1{ /*design ng 4th job post*/
+	margin-top: 10px;
+	margin-left: 50px;
+	width: 250px;
+	height: 250px;
+	background-color: #eeebeb;
+	border-radius: 20px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border:1px solid #989393;
+	
+}
+#forth_post1:hover{ /*shadow ng box ng 4thjob post*/
+
+	-moz-box-shadow: 0 0 20px black;
+	 -webkit-box-shadow: 0 0 20px black;
+	  box-shadow: 0 0 20px black; 
+}
+img.company4{ /*image ng 3rd job post*/
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	display: block;
+}
+#company_description4{ /*description ng 4th job post*/
+	margin-top: 5px;
+	margin-left:20px;
+	font-family: lato;
+	font-size: 12px;
+	color: black;
+
+}

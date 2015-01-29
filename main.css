@@ -1,0 +1,23 @@
+#header_container{
+	background-color: red;
+	width: 100%;
+}
+#right_header{
+	font-family: Lato;
+	font-size: 30;
+	font-weight: bold;
+	color: red
+
+}
+
+ul{
+	display: inline;
+	list-style-type: none;
+}
+
+li{
+	float:right;
+}
+a{
+	background-color: blue;
+}

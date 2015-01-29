@@ -1,0 +1,25 @@
+#stats{
+	font-family: Lato;
+	color: #3f3f3f;
+
+}
+/*images */
+
+#image-title{
+	width: 300px;
+	height: 200px;
+}
+
+/*buttons*/
+
+#dl-button{
+	background-color: #19b5fe;
+	color: white;
+	font-size: 15px;
+	font-family: lato;
+	font-size: 20px
+}
+
+#dl-button:hover{
+	background-color:  #4FC1E9;
+}

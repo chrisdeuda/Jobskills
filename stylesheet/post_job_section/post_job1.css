@@ -1,0 +1,269 @@
+
+/*container ng mga form*/
+#form1_job_post_container{
+	margin: auto;
+	width: 1200px;
+	
+}
+/*First form job post*/
+#form1_job_post{ 
+	margin-left:10px;
+	height: 700px;
+	width: 400px;
+	background-color: #eeebeb;
+	border-radius: 20px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	-moz-box-shadow: 0 0 15px black;
+	-webkit-box-shadow: 0 0 15px black;
+	 box-shadow: 0 0 15px black; 
+}
+h1.form1_job_post{ /*words na post job*/
+	padding: 30px;
+	color:#3f3f3f;
+	font-size: 40px;
+	font-family: lato;
+	font-weight: bold;
+}
+#employers_name_text{ /*words na employers name*/
+	margin-top: -20px;
+	margin-left: 30px;
+	font-family: lato;
+	font-size: 20px;
+	color: #3b3a3a;
+	font-weight:bold;
+
+}
+input#employers_textbox{ /*textbox ng employers name*/
+	width: 300px;
+	font-family: lato;
+	font-size: 20px
+}
+
+#job_title_text{
+	margin-left: 30px;
+	font-family: lato;
+	font-size: 20px;
+	color: #3b3a3a;
+	font-weight:bold;
+
+}
+select { /*selection in job title*/
+	width: 300px;
+	height: 40px;
+	font-family: lato;
+	font-size: 15px
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+#gender_text{ /*words na gender*/
+	margin-top: 20px;
+	margin-left: 30px;
+	font-family: lato;
+	font-size: 20px;
+	color: #3b3a3a;
+	font-weight:bold;
+
+}
+label.male{
+	padding-left: 50px;
+	font-size: 15;
+	font-family: lato;
+
+}
+label.female{
+	font-size: 15;
+	font-family: lato;
+	padding-left: 50px;
+
+}
+label.both{
+	font-size: 15;
+	font-family: lato;
+	padding-left: 50px;
+
+}
+#contact_text{ /*words na employers name*/
+	margin-top: 20px;
+	margin-left: 30px;
+	font-family: lato;
+	font-size: 20px;
+	color: #3b3a3a;
+	font-weight:bold;
+
+}
+input#contact_textbox{ /*textbox ng employers name*/
+	width: 300px;
+	font-family: lato;
+	font-size: 20px
+}
+#employee_type_needed_text{ /*words na employers name*/
+	margin-top: 20px;
+	margin-left: 30px;
+	font-family: lato;
+	font-size: 20px;
+	color: #3b3a3a;
+	font-weight:bold;
+
+}
+select.employee_type_needed{ /*selection in job title*/
+	width: 300px;
+	height: 40px;
+	font-family: lato;
+	font-size: 15px
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+#skills_needed_text{ /*words na employers name*/
+	margin-top: 20px;
+	margin-left: 30px;
+	font-family: lato;
+	font-size: 20px;
+	color: #3b3a3a;
+	font-weight:bold;
+
+}
+
+select.skills_needed{ /*selection in job title*/
+	width: 300px;
+	height: 40px;
+	font-family: lato;
+	font-size: 15px
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+/*second form ng job post*/
+#form2_job_post{ 
+	margin-top: 20px;
+	margin-left:80px;
+	height: 650px;
+	width: 700px;
+	background-color: #eeebeb;
+	border-radius: 20px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	-moz-box-shadow: 0 0 15px black;
+	-webkit-box-shadow: 0 0 15px black;
+	 box-shadow: 0 0 15px black; 
+}
+#course_needed_text{
+	padding: 30px;
+	color:#3f3f3f;
+	font-size: 15px;
+	font-family: lato;
+	font-weight: bold;
+}
+label.science_computer{
+	padding-left: 30px;
+	font-size:15px;
+	font-family: lato;
+}
+label.information_computer{
+	padding-left: 50px;
+	font-size:15px;
+	font-family: lato;
+}
+
+label.accountacy_computer{
+	padding-left: 30px;
+	font-size:15px;
+	font-family: lato;
+}
+label.engineering_computer{
+	padding-left: 30px;
+	font-size:15px;
+	font-family: lato;
+}
+label.architecture_computer{
+	padding-left: 20px;
+	font-size:15px;
+	font-family: lato;
+}
+label.communication_computer{
+	padding-left: 105px;
+	font-size:15px;
+	font-family: lato;
+}
+label.criminology_computer{
+	padding-left: 30px;
+	font-size:15px;
+	font-family: lato;
+}
+label.phsychology_computer{
+	padding-left: 90px;
+	font-size:15px;
+	font-family: lato;
+}
+label.customs_computer{
+	padding-left: 105px;
+	font-size:15px;
+	font-family: lato;
+}
+label.electronics_computer{
+	padding-left: 30px;
+	font-size:15px;
+	font-family: lato;
+}
+/*physical requirement section*/
+#physical_requirement_text{
+	padding: 30px;
+	color:#3f3f3f;
+	font-size: 15px;
+	font-family: lato;
+	font-weight: bold;
+}
+#height_text{ /*words na height*/
+	margin-top: -20px;
+	margin-left: 80px;
+	font-family: lato;
+	font-size: 20px;
+	color: #3b3a3a;
+	font-weight:bold;
+
+}
+input#height_textbox{ /*textbox ng height*/
+	width: 200px;
+	font-family: lato;
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+#gender_preference_text{ /*words na height*/
+	margin-top:5px;
+	margin-left: 80px;
+	font-family: lato;
+	font-size: 20px;
+	color: #3b3a3a;
+	font-weight:bold;
+
+}
+/*buttons for submit and reset*/
+#buttons{
+	float: right;
+	margin-right: 20px;
+}
+.button{
+	background-color: #19b5fe;
+	width: 150px;
+	height: 50px;
+	font-family: lato;
+	font-size: 30px;
+	font-weight: bold;
+	color: white; 
+	line-height: 20px;
+}
+.button:hover{
+	background-color:  #4FC1E9;
+}
+/*text inside button*/
+.button_text{
+	color: white;
+}
+.button_text:hover{
+	color: white;
+	text-decoration: none;
+}
+/*checkbox*/
+input[type='checkbox']{
+	width: 20px;
+	height: 20px;
+}

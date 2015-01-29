@@ -1,0 +1,195 @@
+#main_container{
+	height: 1000px;
+	width: 100%;
+}
+#header_container{
+	width: 100%;
+
+	background-color:white;
+	
+
+}
+
+#left_header{
+	
+	margin: 5px;
+
+	
+	
+}
+
+#logo_header{
+	
+	display: inline;
+	font-family: Lato;
+	font-size: 40px;
+	font-weight: bold;
+	color: black;
+	
+	
+	
+
+/*navigation menu*/
+
+}
+#navigation{
+	margin-top: -120px;
+	float: right;
+
+	
+
+}
+#navigation{
+	margin-right: 40px;
+}
+nav{
+	width: 800px; 
+	float: right;
+	
+	
+	
+
+	
+}
+ul{
+ 
+  padding: 0px;
+  list-style: none;
+}
+
+
+ul.dropdown li{  /*mga size at color ng navbar at background color*/
+	
+	float: left;
+	background-color:#19b5fe;
+	position: relative;
+	width: 150px; 
+	height: 40px;
+	border-right: 1px solid white;
+
+
+}
+
+ul.dropdown li a{ /*words sa loob ng navbar*/
+	display: block;
+	font-family:Lato;
+	font-size: 20px;
+	text-align: center;
+	line-height: 40px;
+	
+	color: white;
+	text-decoration: none;
+	
+
+}
+
+ul.dropdown li a:hover{ /*color ng font at background ng navbar*/
+	background: #4FC1E9;
+	color:white;
+	
+
+}
+
+
+
+ul.dropdown ul li a{ /*words sa loob ng sub menu*/
+	
+	font-size: 15px;
+	display: block;
+	color: black;
+	text-align: left;
+	background-color:white;
+
+
+}
+.btn_login{ /*employers login button inside*/
+	color: white;
+	background-color:#19b5fe;
+	width: 150px;
+	height: 40px;
+	font-size: 20px;
+	font-family: lato; 
+	border: none;
+}
+.btn_login:hover{
+	background-color:#4FC1E9;
+	font-family: lato;
+}
+
+
+
+
+
+/*part ng searchbar*/
+#search_container{
+	float: right;
+	margin-top: -20px;
+
+
+
+}
+
+.search{
+	color: white;
+	background-color: #19b5fe;
+
+}
+.search:hover{
+	color: white;
+	background-color: #4FC1E9;
+}
+            
+
+
+.dropdown_search li a:hover{
+	font-family: lato;
+	font-size: 15px;
+	background-color:#4FC1E9;
+	border:none;
+
+
+
+	/*part na ng terms and conditions*/
+
+}
+.terms_container{
+	margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    background-color:#F8F8F8     ;
+
+}
+
+.text-center{
+	font-family:lato;
+	font-size: 45px;
+
+}
+.lead{
+
+	font-family:lato;
+	font-size: 20px;
+}
+.text-left{
+font-family: lato;
+font-size: 17px;
+opacity:0.9;
+}
+
+.list-unstyled{
+	font-family:lato;
+	font-size:17px;
+	opacity:0.9;
+}
+h2, h3{
+
+	font-family:lato;
+	font-size:17px;
+	opacity:0.9;
+
+
+
+	
+}
+	
+

@@ -1,0 +1,59 @@
+#whole_container{
+	margin: auto;
+	height: 500px;
+}
+
+/*container of whole content*/
+#content_container{
+	margin: auto;
+	width: 1200px;
+}
+/*description word before the pic*/
+#description_text{
+	font-size: 15px;
+	font-family: lato;
+	
+
+}
+/*contact us word*/
+#contact_us_text{
+	color:#3f3f3f;
+	font-size: 50px;
+	font-family: lato;
+	font-weight: bold;
+}
+/*picture of the personnel*/
+img.profile_pic{
+	border: 2px solid black;
+	margin-left: 30px;
+}
+#information_contact_person_-container{
+	margin-top: -70px;
+	margin-left: 20px;
+}
+#name_text{
+	color:#3f3f3f;
+	font-size: 30px;
+	font-family: lato;
+	font-weight: bold;
+}
+#position_text{
+	font-size: 20px;
+	font-family: lato;
+	
+}
+#email_text{
+	font-size: 20px;
+	font-family: lato;
+	
+}
+#tel_text{
+	font-size: 20px;
+	font-family: lato;
+	
+}
+#mobile_text{
+	font-size: 20px;
+	font-family: lato;
+	
+}

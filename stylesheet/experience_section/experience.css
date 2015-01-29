@@ -1,0 +1,39 @@
+/* ID's are for DIVs only */
+/* CLASSES are for other elements*/
+
+
+/* ID's */
+/* for the whole page */
+#content_container{
+	margin: auto;
+	width: 1200px;
+}
+#experience{
+	margin: auto;
+	color:#3f3f3f;
+	font-size: 20px;
+	font-family: lato;
+	font-weight: bold;
+}
+table.table{
+	width: 1200px;
+	margin: auto;
+}
+th#text{
+	font-size: 20px;
+	font-family: lato;
+}
+td{
+	height: 50px;
+}
+#button{
+	float: right;
+}
+.button{
+	background-color: #19b5fe;
+	font-family: lato;
+	font-size: 25px;
+	color: white;
+	border-radius: 5px;
+	width: 150px;
+}

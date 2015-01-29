@@ -1,0 +1,81 @@
+#page
+{
+	margin: auto;
+	width: 1000px;
+	height: 590px;
+	padding-top: 15px;
+	padding-left: 20px;
+}
+
+/* div left side */
+#left-style
+{
+	/*border: 1px solid black;*/
+	width: 281px;
+	float: left;
+	padding-top: 18px;
+}
+
+/* inner div of left style */
+#inner-left-style
+{
+	background-color: #008dc6;
+	/*border: 1px solid black;*/
+	width: 300px;
+	height: 450px;
+	float: left;
+	padding-top: 15px;
+	border-radius: 25px;
+}
+
+/* for the right side div */
+#right-side
+{
+	/*border: 1px solid black;*/
+	margin-top: 10px;
+	float: right;
+	width: 650px;
+	height: 500px;
+	background: url(../image/contact_info/profile_pic.png) ;
+}
+
+/* this is the profile setting div*/
+#ul-rightside
+{
+	/*border: 1px solid black;*/
+	float: right;
+	padding-bottom: 10px;
+}
+
+/* for profile pic */
+img.profile
+{
+	height: 228px;
+	width: 228px;
+	margin-left: 30px;
+}
+
+h1, h2, h3
+{
+	font-style: lato;
+}
+/*button of edit profile*/
+.edit{
+	margin-left: 200px;
+	background-color:#19b5fe;
+	width: 150px;
+	
+}
+.edit:hover{
+	background-color:  #4FC1E9;
+}
+/*edit profile text*/
+.edit_profile_text{
+	color: white;
+	font-family: lato;
+	font-size: 20px;
+}
+.edit_profile_text:hover{
+	color: white;
+	text-decoration: none;
+}

@@ -1,0 +1,166 @@
+#main_container{
+	
+
+
+	
+	
+}
+
+#header_container{
+	margin:auto;
+	width: 1300px;
+	background-color:white;
+	border-bottom: 1px solid #828282;
+	height: 220px;
+	
+
+}
+
+#left_header{
+	margin-top: 10px;
+	margin-left: 50px;
+
+	
+	
+}
+
+#logo_header{
+	
+	display: inline;
+	font-family: Lato;
+	font-size: 40px;
+	font-weight: bold;
+	color: black;
+	
+	
+	
+
+/*navigation menu*/
+
+}
+#navigation{
+	margin-top: -120px;
+	float: right;
+
+	
+
+}
+#navigation1{
+	margin-right: -160px;
+	width: 900px;
+	 
+}
+nav{
+	width: 800px; 
+	float: right;
+	
+	
+	
+
+	
+}
+ul{
+ 
+  padding: 0px;
+  list-style: none;
+}
+
+
+ul.dropdown li{  /*mga size at color ng navbar at background color*/
+	
+	float: left;
+	background-color:orange;
+	position: relative;
+	width: 170px; 
+	height: 30px;
+	border-right: 1px solid white;
+
+
+
+}
+
+ul.dropdown li a{ /*words sa loob ng navbar*/
+	display: block;
+	font-family:Lato;
+	font-size: 25px;
+	text-align: center;
+	line-height: 30px;
+	color: white;
+	text-decoration: none;
+	
+
+}
+
+ul.dropdown li a:hover{ /*color ng font at background ng navbar*/
+	background: #FFC125;
+	color:white;
+	
+
+}
+
+
+
+ul.dropdown ul li a{ /*words sa loob ng sub menu*/
+	font-size: 15px;
+	color: black;
+	text-align: left;
+	background-color:white;
+
+
+
+
+}
+.btn_login{ /*employers login button inside*/
+	color: white;
+	background-color:orange;
+	width: 170px;
+	height: 30px;
+	font-size: 25px;
+	font-family: lato; 
+	border: none;
+	line-height: 30px;
+
+}
+.btn_login:hover{
+	background-color:#FFC125;
+	font-family: lato;
+
+}
+ul.sub_menu_login li{
+	width: 170px;
+}
+
+
+
+/*part ng searchbar*/
+#search_container{
+	float: right;
+	margin-top: -20px;
+
+
+
+}
+
+.search{
+	color: white;
+	background-color: #19b5fe;
+
+}
+.search:hover{
+	color: white;
+	background-color: #4FC1E9;
+}
+            
+
+
+.dropdown_search li a:hover{
+	font-family: lato;
+	font-size: 15px;
+	background-color:#4FC1E9;
+	border:none; 
+	
+}
+/*search button*/
+#search_button{
+	margin-right: 60px;
+}

@@ -1,0 +1,394 @@
+#main_container{
+	width: 100%;
+	height: 1000px;
+
+	
+	
+}
+
+#header_container{
+	width: 100%;
+
+	background-color:white;
+	
+
+}
+
+#left_header{
+	
+	margin: 5px;
+
+	
+	
+}
+
+#logo_header{
+	
+	display: inline;
+	font-family: Lato;
+	font-size: 40px;
+	font-weight: bold;
+	color: black;
+	
+	
+	
+
+	/*navigation menu*/
+
+}
+#navigation{
+	margin-top: -120px;
+	float: right;
+
+	
+
+}
+nav{
+	width: 800px; 
+	float: right;
+	
+	
+	
+
+	
+}
+ul{
+ 
+  padding: 0px;
+  list-style: none;
+}
+
+
+ul.dropdown li{  /*mga size at color ng navbar at background color*/
+	float: left;
+	background-color:#19b5fe;
+	position: relative;
+	width: 200px; 
+	height: 40px;
+	border-right: 1px solid white;
+
+
+}
+
+ul.dropdown li a{ /*words sa loob ng navbar*/
+	display: block;
+	font-family:Lato;
+	font-size: 22px;
+	text-align: center;
+	line-height: 40px;
+	
+	color: white;
+	text-decoration: none;
+	
+
+}
+
+ul.dropdown li a:hover{ /*color ng font at background ng navbar*/
+	background: #4FC1E9;
+	color:white;
+	
+
+}
+
+
+
+ul.dropdown ul li a{ /*words sa loob ng sub menu*/
+	
+	font-size: 15px;
+	display: block;
+	color: black;
+	text-align: left;
+	background-color:white;
+
+
+}
+.btn_login{ /*employers login button inside*/
+	color: white;
+	background-color:#19b5fe;
+	width: 200px;
+	height: 40px;
+	font-size: 22px;
+	font-family: lato; 
+	border: none;
+}
+.btn_login:hover{
+	background-color:#4FC1E9;
+	font-family: lato;
+}
+
+
+
+/*part ng searchbar*/
+#search_container{
+	float: right;
+	margin-top: -20px;
+
+
+
+}
+
+.search{
+	color: white;
+	background-color: #19b5fe;
+
+}
+.search:hover{
+	color: white;
+	background-color: #4FC1E9;
+}
+            
+
+
+.dropdown_search li a:hover{
+	font-family: lato;
+	font-size: 15px;
+	background-color:#4FC1E9;
+	border:none; 
+	
+}
+
+/*textbox*/
+
+
+
+/*banner container*/
+#banner_container{
+	
+	
+}
+.carousel-control.left{
+	color: white;
+	background:none;
+	border: none;
+	
+}
+.carousel-control.right{
+	color: white;
+	background:none;
+	border: none;
+	
+}
+/*latest job vacancy*/
+#latest_job_vacancy{
+	font-family: lato;
+	font-size: 20px;
+	color: black;
+	margin-top: 10px;
+	margin-left: 20px;
+	font-weight: bold;
+}
+
+/*olderpost button*/
+#olderpost{
+	float: right;
+	margin-top: 10px;
+	margin-right: 30px;
+
+}
+.dropdown2 li a:hover{
+	font-family: lato;
+	font-size: 15px;
+	background-color:#4FC1E9;
+	border:none; 
+	
+}
+
+/*job vacancy post*/
+
+/*first_post*/
+#job_vacany_post{
+	width: 100%;
+	
+}
+
+#first_post{   /*design ng 1st job post*/
+	margin-top: 10px;
+	margin-left: 100px;
+	width: 250px;
+	height: 250px;
+	background-color: #eeebeb;
+	border-radius: 20px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border:1px solid #989393;
+	text-align: justify;
+
+	
+
+}
+#first_post:hover{ /*design ng shadow 1st job post*/
+
+	-moz-box-shadow: 0 0 20px black;
+	 -webkit-box-shadow: 0 0 20px black;
+	  box-shadow: 0 0 20px black; 
+}
+img.company1{ /*image ng 1st job post*/
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	display: block;
+}
+#company_description1{ /*description ng 1st job post*/
+	margin-top: 5px;
+	margin-left:20px;
+	font-family: lato;
+	font-size: 12px;
+	color: black;
+
+}
+
+#second_post{ /*design ng 2nd job post*/
+	margin-top: 10px;
+	margin-left: 50px;
+	width: 250px;
+	height: 250px;
+	background-color: #eeebeb;
+	border-radius: 20px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border:1px solid #989393;
+}
+#second_post:hover{ /* shadow ng box ng 2nd job post*/
+
+	-moz-box-shadow: 0 0 20px black;
+	 -webkit-box-shadow: 0 0 20px black;
+	  box-shadow: 0 0 20px black; 
+}
+img.company2{ /*image ng 2nd job post*/
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	display: block;
+}
+#company_description2{ /*description ng 2nd job post*/
+	margin-top: 5px;
+	margin-left:20px;
+	font-family: lato;
+	font-size: 12px;
+	color: black;
+
+}
+
+
+#third_post{ /*design ng 3rd job post*/
+	margin-top: 10px;
+	margin-left: 50px;
+	width: 250px;
+	height: 250px;
+	background-color: #eeebeb;
+	border-radius: 20px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border:1px solid #989393;
+	
+}
+#third_post:hover{ /*shadow ng box ng 3rd job post*/
+
+	-moz-box-shadow: 0 0 20px black;
+	 -webkit-box-shadow: 0 0 20px black;
+	  box-shadow: 0 0 20px black; 
+}
+img.company3{ /*image ng 3rd job post*/
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	display: block;
+}
+#company_description3{ /*description ng 3rd job post*/
+	margin-top: 5px;
+	margin-left:20px;
+	font-family: lato;
+	font-size: 12px;
+	color: black;
+
+}
+
+#forth_post{ /*design ng 4th job post*/
+	margin-top: 10px;
+	margin-left: 50px;
+	margin-right: 70px;
+	width: 250px;
+	height: 250px;
+	background-color: #eeebeb;
+	border-radius: 20px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border:1px solid #989393;
+	
+}
+#forth_post:hover{ /*shadow ng box ng 4th job post*/
+
+	-moz-box-shadow: 0 0 20px black;
+	 -webkit-box-shadow: 0 0 20px black;
+	  box-shadow: 0 0 20px black; 
+}
+img.company4{ /*image ng 4th job post*/
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	display: block;
+}
+#company_description4{ /*description ng 4th job post*/
+	margin-top: 5px;
+	margin-left:20px;
+	font-family: lato;
+	font-size: 12px;
+	color: black;
+
+}
+
+/*View more hyperlink*/
+#view_more_hyperlink{
+	font-family: lato;
+	font-size: 20px;
+	float: right;
+	margin-right: 20px;
+}
+.view_more{
+	color: black;
+	text-decoration: none;
+}
+.view_more:hover{
+	color:#19b5fe;
+	text-decoration: none;
+}
+
+/*older post carousel*/
+#older_post_carousel1{
+
+	background-color: #eeebeb;
+	width: 100%;
+	height: 300px;
+	display: none;
+
+}
+
+
+/*forecast skills*/
+
+
+/*footer*/
+#footer{
+	width: 100%;
+	height: 300px;
+	background-color:#656d78;
+}
+
+.description_text{
+	font-family: lato;
+	font-size: 20px;
+	color: black;
+
+}
+.description_text:hover{
+	color: black;
+}
+.description_text:visited{
+	color: blue;
+}
+
+
+
+
+#19b5fe
+ #4FC1E9

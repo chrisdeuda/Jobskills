@@ -1,0 +1,128 @@
+	
+
+
+}
+#header2{
+	color:#3f3f3f;
+	font-size: 40px;
+	font-family: lato;
+	font-weight: bold;
+
+
+
+}
+.container{
+	margin-top: -40px;
+	clear: both;
+}
+
+.form-control{
+	width: 250px;
+	padding: 3px;
+}
+label{
+	font-family: lato;
+	font-size: 17px;
+	color: #3b3a3a;
+	font-weight:bold;
+}
+.button{
+	background-color:#19b5fe;
+	color: white;
+	font-size: 15px;
+	width: 100px;
+	height: 45px;
+	font-family: Lato;
+}
+.button:hover{
+	background-color:  #4FC1E9;
+}
+#button_text{
+	color: white;
+	text-decoration: none;
+
+}
+#button_text:hover{
+	color: white;
+	text-decoration: none;
+
+}
+
+.insert_button{
+	background-color: #19b5fe;
+	color: white;
+	margin-left: -20px;
+	font-size: 15px;
+	width: 200px;
+	height: 45px;
+	font-family: Lato;
+}
+#btn-ins{
+	background-color: #828282;
+	color: white;
+	font-size: 10px;
+	width: 100px;
+	height: 20px;
+	font-family: Lato;
+}
+#reg-form{
+	padding: 10px;
+	width: 80%;
+	font-family: Lato;
+}
+
+#com-logo{
+	float: right;
+	min-width: 150px;
+	max-width: 150px;
+	min-height: 170px;
+	max-height: 170px;
+}
+
+#pic{
+	border: 1px solid black;
+	min-width: 150px;
+	max-width: 150px;
+	min-height: 150px;
+	max-height: 150px;
+}
+
+#com-reg{
+	background-color: #eeebeb;
+	-moz-box-shadow: 0 0 15px black;
+	-webkit-box-shadow: 0 0 15px black;
+	box-shadow: 0 0 15px black;
+}
+
+#comname-text, #comadd-text{
+	width: 300px;
+}
+
+#yahoo{
+	width: 100px;
+}
+select{
+	width: 300px;
+}
+input#telephone_no{
+	width: 225px;
+}
+input#mobile_no{
+	width: 200px;
+}
+input#fax_no{
+	width: 200px;
+}
+input#email_address{
+	width: 225px;
+}
+input#industry_type{
+	width: 225px;
+}
+select{
+	width: 250px;
+	height:45px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+/*submit button*/
