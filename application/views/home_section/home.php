@@ -6,39 +6,39 @@
     $(document).ready(function(){
     	$('.1_week').click(function(){
     		$('#older_post_carousel1').toggle();
-    		
+
    	 	});
    	 		$('.2_week').click(function(){
     		$('#older_post_carousel1').toggle();
-    		
+
    	 	});
    	 		$('.3_week').click(function(){
     		$('#older_post_carousel1').toggle();
-    		
+
    	 	});
- 
-    	
+
+
      });
     </script>
  <link rel="stylesheet" href="<?php echo base_url(); ?>stylesheet/home_section/home1.css" type="text/css" />
-	
+
 <!-- main container -->
 		<div id="main_container">
 			<!-- insert header here -->
 			<?php include_once('includes/header_section/header.php'); ?>
 			<!-- end header here -->
-				
+
 			<br></br>
 				<div id="banner_container"> <!--start banner  -->
 						<img src="<?php echo base_url().'image/1.png';  ?>" width="100%"  >
-											
+
 				</div> <!--end banner  -->
 				<div id="first_content"> <!--start first section  -->
-					
+
 					<div id="latest_job_vacancy"> <!--container of latest job vacancy and older post button -->
 						<div id="latest_job_vacancy">
 							Latest Job Vacancy
-						
+
 							<div id="olderpost">  <!--start of older post navigation -->
 								<div class="btn-group">
 							    	<div class="dropdown2">
@@ -47,12 +47,12 @@
 								            <li><a  class="1_week">1 week</a></li>
 								            <li><a class="2_week">2 weeks</a></li>
 								            <li><a  class="3_week">3 weeks</a></li>
-								            
-								        </ul> 
-								  	</div>            
+
+								        </ul>
+								  	</div>
 						   		</div>
 						   	</div>  <!--end of older post navigation -->
-						</div>								
+						</div>
 					</div>  <!--end of container of latest job vacancy and older post button -->
 					<br> </br>
 					<br> </br>
@@ -68,7 +68,7 @@
 										Course Needed:ACT|BSCS|ACCOUNTANCY
 									</div>
 								</div>
-							</div>	
+							</div>
 							<div class="form-group">
 								<div id="second_post">
 									<img class="company2" src="<?php echo base_url().'image/company.png';  ?>" width="220" height="150"    >
@@ -99,26 +99,26 @@
 									</div>
 								</div>
 							</div>
-							
+
 						</form>
 					</div> <!--end job vacancy post -->
-					
+
 					<div id="view_more_hyperlink"> <!--start view more hyperlink -->
-						<button class="view_more_button btn-lg"><a  href="<?php echo base_url().'site/view_more_main'; ?>" class="view_more">View More</a></button>		
+						<button class="view_more_button btn-lg"><a  href="<?php echo base_url().'site/view_more_main'; ?>" class="view_more">View More</a></button>
 					</div>
 				</div><!--end ng first content -->
 				<br></br>
 				<br></br>
 
-				
+
 				<div  id="older_post_carousel1"> <!--start older post toggle in jquery -->
-					<div id="older_post_carousel" class="carousel slide" data-interval="false" >	
+					<div id="older_post_carousel" class="carousel slide" data-interval="false" >
 						<ol class="carousel-indicators">
 								<li data-target="#older_post_carousel" data-slide-to = "0" class="active" ></li>
 								<li data-target="#older_post_carousel" data-slide-to = "1" ></li>
 								<li data-target="#older_post_carousel" data-slide-to = "2"></li>
 							</ol>
-						
+
 						<div class="carousel-inner">  <!--start ng carousel -->
 							<div class="item active">
 								<form class="form-inline">
@@ -131,8 +131,8 @@
 												Course Needed: ACT|BSCS|ACCOUNTANCY
 											</div>
 										</div>
-									</div>	
-									<div class="form-group"> 
+									</div>
+									<div class="form-group">
 										<div id="second_post"> <!--end ng second post -->
 											<img class="company2" src="<?php echo base_url().'image/company.png';  ?>" width="220" height="150"    >
 											<div id="company_description2">
@@ -161,10 +161,10 @@
 												Course Needed: ACT|BSCS|ACCOUNTANCY
 											</div>
 										</div>
-									</div>		
+									</div>
 								</form>
-							</div>	
-							<div class="item">  <!--second slides --> 
+							</div>
+							<div class="item">  <!--second slides -->
 								<form class="form-inline">
 									<div class="form-group">
 										<div id="first_post">
@@ -175,7 +175,7 @@
 												Course Needed:ACT|BSCS|ACCOUNTANCY
 											</div>
 										</div>
-									</div>	
+									</div>
 									<div class="form-group">
 										<div id="second_post">
 											<img class="company2" src="<?php echo base_url().'image/company.png';  ?>" width="220" height="150"    >
@@ -205,7 +205,7 @@
 												Course Needed: ACT|BSCS|ACCOUNTANCY
 											</div>
 										</div>
-									</div>		
+									</div>
 								</form>
 							</div>
 							<div class="item"> <!--third slides -->
@@ -219,7 +219,7 @@
 												Course Needed: ACT|BSCS|ACCOUNTANCY
 											</div>
 										</div>
-									</div>	
+									</div>
 									<div class="form-group">
 										<div id="second_post">
 											<img class="company2" src="<?php echo base_url().'image/company.png';  ?>" width="220" height="150"    >
@@ -249,45 +249,20 @@
 												Course Needed: ACT|BSCS|ACCOUNTANCY
 											</div>
 										</div>
-									</div>		
+									</div>
 								</form>
 							</div>
 						</div> <!--end ng carousel -->
 						<a  class="carousel-control left" href="#older_post_carousel" data-slide="prev">
 									<span class="glyphicon glyphicon-chevron-left"></span>
 								</a>
-							
+
 								<a class="carousel-control right" href="#older_post_carousel" data-slide="next">
 									<span class="glyphicon glyphicon-chevron-right"></span>
 								</a>
 					</div>
 				</div> <!--end older post toggle in jquery -->
-				
-				<div id="forecast_skills"> <!-- forecast skills section -->
-					<div id="forecast_carousel" class="carousel slide" data-ride="carousel" data-interval="false">
-						<ol class="carousel-indicators">
-							<li data-target="#forecast_carousel" data-slide-to = "0" class="active" ></li>
-							<li data-target="#forecast_carouselr" data-slide-to = "1" ></li>
-					
-						</ol>
-						<div class="carousel-inner">
-							<div class="item active">
-									<img src="<?php echo base_url().'image/web_design1.png';  ?>" width="100%"  >
-							</div>
-							<div class="item">
-								<img src="<?php echo base_url().'image/accountancy.png'; ?>" width="100%"  class="img-responsive">
-							</div>
-							
-						</div>
-							<a class="carousel-control left" href="#forecast_carousel" data-slide="prev">
-								<span class="glyphicon glyphicon-chevron-left"></span>
-							</a>
-							<a class="carousel-control right" href="#forecast_carousel" data-slide="next">
-								<span class="glyphicon glyphicon-chevron-right"></span>
-							</a>
-					</div>							
-										
-				</div><!--end forecast skills section -->
+
 
 				<!-- footer section -->
 					<!-- insert footer here -->

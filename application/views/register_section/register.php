@@ -3,14 +3,14 @@
 	<title>Register </title>
 
 		<link rel="stylesheet" href="<?php echo base_url(); ?>stylesheet/register_section/register4.css" type="text/css" />
-		
+
 
 	</head>
-	
+
 
 	<!-- Main Content-->
 	<div id="main_container">
-		<div id="header">	
+		<div id="header">
 			<!-- insert header here -->
 				<?php include_once('includes/header_section/header.php'); ?>
 				<!-- end header here -->
@@ -25,7 +25,7 @@
 					<h2 id="header2"><b>Company Registration </b></h2>
 					<center>
 
-					<div id="reg-form">
+					<div style="height:550px;" id="reg-form">
 
 						<div id="com-logo">
 							<center>
@@ -53,7 +53,7 @@
 								</td>
 							</tr>
 						</table>
-						
+
 						<table width="100%">
 							<tr>
 								<td>
@@ -102,20 +102,22 @@
 							</tr>
 						</table>
 						<div class="form-actions" style="float: right;">
-							
 
 
-							<a class = "button btn-lg" href="<?php echo base_url().'site/company_employers_side_main'; ?>" id="button_text">Submit</a>
-							<button class="button btn-lg">Reset</button>
+
+							<a  class = "button btn-lg"  href="<?php echo base_url().'site/company_employers_side_main'; ?>" id="button_text" >Submit</a>
+								<a  class = "button btn-lg" href="#" id="button_text" >Reset</a>
 						</div>
 					</div>
-						
+
 				</div>
 			</div>
 		</div>
 	</div>
+	<br></br>
+
 	<!-- End of Main Content -->
 	<!-- insert footer here -->
 				 <?php include_once('includes/footer_section/footer.php'); ?>
        			 <!-- end footer -->
-	
+

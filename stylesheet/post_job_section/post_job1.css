@@ -52,7 +52,7 @@ select { /*selection in job title*/
 	width: 300px;
 	height: 40px;
 	font-family: lato;
-	font-size: 15px
+	font-size: 15px;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
 }
@@ -110,8 +110,8 @@ select.employee_type_needed{ /*selection in job title*/
 	width: 300px;
 	height: 40px;
 	font-family: lato;
-	font-size: 15px
-	-moz-border-radius:5px;
+	font-size: 15px;
+	-moz-border-radius : 5px;
 	-webkit-border-radius:5px;
 }
 #skills_needed_text{ /*words na employers name*/
@@ -128,7 +128,7 @@ select.skills_needed{ /*selection in job title*/
 	width: 300px;
 	height: 40px;
 	font-family: lato;
-	font-size: 15px
+	font-size: 15px;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
 }

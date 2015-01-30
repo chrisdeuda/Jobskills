@@ -2,10 +2,9 @@
 	<head>
 	<title>HR Register </title>
 		<link rel="stylesheet" href="<?php echo base_url(); ?>stylesheet/hr_register_section/hr_register1.css" type="text/css" />
-		
 
 	</head>
-	
+
 
 	<!-- Main Content-->
 	<div id="main_container">
@@ -17,7 +16,7 @@
 			<br></br>
 
 		<div class="container" style="max-width: 900px;">
-			
+
 			<div class="row">
 				<div  id="hr-reg">
 					<br/>
@@ -54,7 +53,7 @@
 								</td>
 							</tr>
 						</table>
-						
+
 						<table width="100%">
 							<tr>
 								<td>
@@ -87,11 +86,11 @@
 									<input style="margin-left:20px" id="confirm_password" type="password" class="form-control input-lg" >
 								</td>
 							</tr>
-							
-								
-							
+
+
+
 						</table>
-						
+
 					</div>
 					<!-- buttons(submit & reset) -->
 					<br></br>
@@ -99,7 +98,7 @@
 							<button class="button btn-lg"><a href="<?php echo base_url().'site/contact_information_main'; ?>" class="submit_button">Submit</button>
 							<button class="button btn-lg">Reset</button>
 						</div>
-						
+
 				</div>
 
 			</div>
@@ -113,5 +112,5 @@
        			 <!-- end footer -->
 	</div>
 	</body>
-	
+
 </html>

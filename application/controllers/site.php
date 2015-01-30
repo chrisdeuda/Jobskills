@@ -7,10 +7,10 @@ class Site extends CI_Controller {
 	 *
 	 * Maps to the following URL
 	 * 		http://example.com/index.php/welcome
-	 *	- or -  
+	 *	- or -
 	 * 		http://example.com/index.php/welcome/index
 	 *	- or -
-	 * Since this controller is set as the default controller in 
+	 * Since this controller is set as the default controller in
 	 * config/routes.php, it's displayed at http://example.com/
 	 *
 	 * So any other public methods not prefixed with an underscore will
@@ -19,7 +19,7 @@ class Site extends CI_Controller {
 	 */
 	public function index()
 	{
-		echo "sd";
+		$this->home_main();
 	}
 	// header
 	public function header_main(){
@@ -48,7 +48,7 @@ class Site extends CI_Controller {
 	public function choices_main(){
 		$this->load->view('choices_section/choices');
 	}
-	
+
 	public function view_more_main(){
 		$this->load->view('home_section/view_more');
 	}
@@ -121,7 +121,10 @@ class Site extends CI_Controller {
 		$this->load->view('experience_section/experience');
 	}
 
-
+	// description page
+	public function description_main(){
+		$this->load->view('description_section/description');
+	}
 
 
 
@@ -147,9 +150,14 @@ class Site extends CI_Controller {
 	public function home_sample_main(){
 		$this->load->view('home');
 	}
+
+	public function survey(){
+		$this->load->view('survey_skills');
+
+	}
 }
 
 
-	
+
 /* End of file welcome.php */
 /* Location: ./application/controllers/welcome.php */

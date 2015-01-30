@@ -1,9 +1,9 @@
-	
-	
+
+
 	<link rel="stylesheet" href="<?php echo base_url(); ?>stylesheet/footer_section/footer3.css" type="text/css" />
 	</head>
 
-	
+
 	<div style="clear:both;" id="footer">
 		<table style="margin:auto">
 				 <tr>
@@ -13,9 +13,9 @@
 				    <th style="font-family:lato;font-size:20px;color:black;padding:30px"><a  href="<?php echo base_url().'site/help_main'; ?>" class="help_text">Help</a></th>
 				 </tr>
 				 <tr>
-				    <td style="text-align:center"><a href="#" class="description_text">Description</a></td>
+				    <td style="text-align:center"><a href="#" class="description_text"><a  href="<?php echo base_url().'site/description_main'; ?>" class="contact_us_text">Description</a></td>
 				    <td style="padding:10px;text-align:center"><a  href="<?php echo base_url().'site/team_description_main'; ?>" class="our_team_text">Our Team</a></td>
-				   
+
 				 </tr>
 				 <tr>
 				    <td></td>
