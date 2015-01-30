@@ -10,12 +10,28 @@ class Models_Survey extends MY_Model{
         $this->order_by = '';      
             
     }
-    /**
-     * Get User Id
-     * @param string $user - username
-     * @param string(md5) $pass - password
-     * @return string user_id/ -1 no match found
-     */
+    
+    public function get_top_in_survey(){
+        $sql = "SELECT *"
+            . " FROM `basic_skills`"
+            . " ORDER BY `basic_skills`.`SKILL_RATING` DESC"
+            . " LIMIT 0 , 10";
+        
+       
+           $query = $this->db->query($sql);
+           $query_result = $query->result();
+        
+        if( $query->num_rows >0 ){
+            return $query_result;
+            
+        }
+        
+        
+        //return $this->order_by("SKILL_RATING", "desc")->limit(0, 10)->get_many();
+
+        
+        
+    }
     
     
  

@@ -2,15 +2,12 @@
 
 class Survey extends CI_Controller {
     
-    
-    
-
    public function __construct(){
        parent::__construct();
        $this->load->model('models_survey');
        $this->load->model('models_survey_data');
-       
-       
+       $this->load->model('models_console');
+   
    }
     
     
@@ -30,11 +27,6 @@ class Survey extends CI_Controller {
         $post_index = 0;
         $total_data = 0;
         $column_name = "";
-        
-        $data = array(
-            "ID" => NULL,
-            "USER_ID_FK" => 1
-        );
         
         $form_data = $this->input->post();
         
@@ -59,9 +51,16 @@ class Survey extends CI_Controller {
         }
         
         //save the  value to other tables
-        $temp = array_merge( $data, $form_data);
+        
+        $data_default = array(
+            "ID" => NULL,
+            "USER_ID_FK" => 1
+        );
+        $temp = array_merge( $data_default, $form_data);
         $this->models_survey_data->insert( $temp );
-        print_r( $temp);
+        
+        echo json_encode( array( "status" => 1));
+        
         
     }
     
@@ -74,6 +73,7 @@ class Survey extends CI_Controller {
         
         
     }
+    
     private function convertNameToNum( $the_string){
          switch( $the_string){
             case "READING" : return 1; 
@@ -124,6 +124,34 @@ class Survey extends CI_Controller {
             
         }
     }
+    
+    public function get_survey_result(){
+        
+        
+        $data['results'] = $this->models_survey->get_top_in_survey();
+        $this->load->view('survey_result', $data);
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+    
+    
+    
     
     
     

@@ -9,9 +9,6 @@ $(document).ready(function(){
 
             $('#btn_submit').click( function (event){
                 event.preventDefault();
-                //result = $('input[name="test1"]').prop('checked') ? 1 : 0;
-                //
-                //
                 $Form.getFormValues();
             });
 
@@ -28,11 +25,8 @@ $(document).ready(function(){
 
             var max_value = 20;
 
-
-
             var form_action = $('#surveyForm').prop('action');
 
-            alert( form_action);
             var data = {};
 
                 for( index = 1; index < max_value; index++ ){
@@ -43,12 +37,6 @@ $(document).ready(function(){
                     data[input_name] = result;
                 }
 
-
-                for( x in data){
-                    console.log( x + " = " + data[x] );
-                }
-
-
                 $.ajax({
                     type: "POST",
                     url: form_action,
@@ -58,18 +46,7 @@ $(document).ready(function(){
                     success:
                         function(data){
                             console.log(data);
-                            //alert(data);
-
-
-                            /*
-
-
-                            $result = JSON.parse(data);
-                            if ( $result.status == 1) {
-                                console.log("save success");
-                            } else if ( $result.status == 0){
-                                console.log("not save");
-                            }*/
+                            window.location = "http://localhost/hazelnew/survey/get_survey_result";
 
                         },
                 });
@@ -91,6 +68,7 @@ $(document).ready(function(){
 
 
     }
+
 
      $Form.init();
 

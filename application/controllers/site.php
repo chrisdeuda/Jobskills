@@ -155,6 +155,12 @@ class Site extends CI_Controller {
 		$this->load->view('survey_skills');
 
 	}
+        
+        public function survey_result(){
+            $this->load->view('survey_result');
+
+	}
+        
 }
 
 
