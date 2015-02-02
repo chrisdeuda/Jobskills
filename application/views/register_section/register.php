@@ -103,12 +103,19 @@
 						</table>
 						<div class="form-actions" style="float: right;">
 
+						<!--
 
+							<a  class = "button btn-lg btn-submit"  href="<?php echo base_url().'site/company_employers_side_main'; ?>" id="btn_submit" >Submit</a>
+								<a  class = "button btn-lg btn-reset"  href="#" id="btn_" >Reset</a>
+							-->
 
-							<a  class = "button btn-lg"  href="<?php echo base_url().'site/company_employers_side_main'; ?>" id="button_text" >Submit</a>
-								<a  class = "button btn-lg" href="#" id="button_text" >Reset</a>
+							<input type="button" class="btn btn-info" value="Submit" id="btn_submit">
+							<input type="reset" class="btn btn-info" value="Reset" id="btn_reset">
+
 						</div>
 					</div>
+
+					<script src="<?php echo base_url().'public/js/registration/company_registration_validation.js'; ?>" type="text/javascript"> </script>
 
 				</div>
 			</div>

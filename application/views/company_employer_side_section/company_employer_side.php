@@ -3,27 +3,27 @@
 	<title>Company Profile </title>
 
 		<link rel="stylesheet" href="<?php echo base_url(); ?>stylesheet/company_employer_side_section/company_employer_side4.css" type="text/css" />
-		
+
 
 	</head>
 
 	<body>
-		
-			
 
-			
+
+
+
 	<div id="main-container">
 		<!-- insert header here -->
 			<?php include_once('includes/header_section/header.php'); ?>
 			<!-- end header here -->
-			
+
 			<br></br>
 		<br></br>
-			
+
 				<div id="prof_pic">
 					<img src="<?php echo base_url().'image/company_profile/logo.jpg'; ?>" id="prof_picture"/>
 				</div>
-			
+
 
 			<br/>
 			<div class="description_about_company">
@@ -41,39 +41,48 @@
 							</div>
 							<br>
 							<div style="width:500px;height:200px" id="hr_list">
+								<?php
+									echo "session" . $this->session->userdata('company_id');
+
+								?>
+
+
+
+
+
 								<h2 style="margin-left:160px"><b> HR Manager </b> </h2>
 								<br>
-								<div id="warning_sign"> 
-									Click "Add HR" to add Human Resource Manager 
-								</div> 
+								<div id="warning_sign">
+									Click "Add HR" to add Human Resource Manager
+								</div>
 								<br>
 
 									 <a style="margin-left:190px;" class="add_hr_button btn-lg" href="<?php echo base_url().'site/hr_register_main'; ?>" id="text_post_job">Add HR</a>
 								<br> </br>
-								
+
 							</div>
 						</div>
-						
+
 						<div class="form-group">
 							<div id="job_list">
 								<h2 style="margin-left:150px"><b> Job Offerings </b> </h2>
-								<br> 
+								<br>
 								<div id="warning_sign_post">
 									Click "Add Post Job" to post the available job in your company.
 								</div>
 								<br>
-								
+
 									 <a style="margin-left:190px;" class="add_hr_button btn-lg" href="<?php echo base_url().'site/choices_main'; ?>" id="text_post_job">Post Job</a>
-								
+
 								<br></br>
 							</div>
 						</div>
 				</form>
 			</div>
 
-			
 
-			
+
+
 	</div> <!-- main-container -->
 			<!-- insert footer here-->
 			<br/>

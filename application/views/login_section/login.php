@@ -6,14 +6,14 @@
 	</head>
 
 <body>
-	
+
 <!-- main container -->
 		<div id="main_container">
 			<!-- insert header here -->
 			<?php include_once('includes/header_section/header.php'); ?>
 			<!-- end header here -->
 			<br></br>
-				
+
 			<div id="content_container">
 				<div id="job_vacany_post"><!--start of sign in form -->
 						<form class="form-inline">
@@ -27,7 +27,7 @@
 										<button class="login_button btn-lg">Log In</button>
 									</div>
 								</div>
-							</div>	
+							</div>
 							<div class="form-group">
 								<div id="welcome_container">
 									<div id="welcome_text">
@@ -41,23 +41,23 @@
 										<div id="not_registered_text">
 											Not yet Registered?
 										</div>
-										<button class="register_button btn-lg"><a  href="<?php echo base_url().'site/register_main'; ?>" class="register_text">Register Now</button>
+										<a style="width:200px;" class="register_button register_text btn-lg" href="<?php echo base_url().'site/register_main'; ?>" >Register Now</a>
 									</div>
 								</div>
-							</div>	
+							</div>
 						</form>
 			</div>
 
 				</div>	<!--end sign in form -->
-				
+
 				<!-- insert footer here -->
 				 <?php include_once('includes/footer_section/footer.php'); ?>
        			 <!-- end footer -->
 				<!-- end footer -->
-				
-						
-				
-		</div>			
-		
+
+
+
+		</div>
+
 </body>
 </html>

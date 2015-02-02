@@ -95,11 +95,14 @@
 					<!-- buttons(submit & reset) -->
 					<br></br>
 					<div class="form-actions" style="float: right;margin:40px;">
+						<!--
 							<button class="button btn-lg"><a href="<?php echo base_url().'site/contact_information_main'; ?>" class="submit_button">Submit</button>
 							<button class="button btn-lg">Reset</button>
-						</div>
-
+						</div>-->
+						<input type="button" class="btn btn-info" value="Submit" id="btn_submit">
+						<input type="reset" class="btn btn-info" value="Reset" id="btn_reset">
 				</div>
+									<script src="<?php echo base_url().'public/js/registration/company_hr_validation.js'; ?>" type="text/javascript"> </script>
 
 			</div>
 
