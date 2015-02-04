@@ -7,6 +7,7 @@ class Company_Register extends CI_Controller {
        parent::__construct();
        $this->load->model('models_company_register');
        $this->load->model('models_hr_register');
+       $this->load->model('models_login');
    }
 
     public function index()
@@ -40,49 +41,39 @@ class Company_Register extends CI_Controller {
     public function processHRForm(){
         $default_data = array(
             "COMPANY_ID_FK" => $this->session->userdata('company_id')
-            );
+        );
         
-        $sql = "INSERT INTO `project`.`company_list` (`COMPANY_ID_PK`, `COMPANY_NAME`, `COMPANY_STATUS`) VALUES (NULL, '{$company_name}', '0');";
         $form_data = $this->input->post();
-         $temp = array_merge( $default_data, $form_data);
+        $temp = array_merge( $default_data, $form_data);
          
-         $this->models_hr_register->insert( $temp );
+        $this->models_hr_register->insert( $temp );
          
-         $user_id = $this->models_company_register->getIdFromList($company_name);
+        $user_id = $this->models_hr_register->getIdFromList( $form_data['NAME'] );
         
-        //$this->models_company_register->db->query( $sql );
-        
-        
-        echo json_encode( array("status" => 1));
-        
-        
-        
-        
+        echo json_encode( array("status" => 1, "user_id" => $user_id    ));
         
     }
     
     public function saveLogin(){
-
-        echo json_encode( array( "user_id" => 1 ));
-        
-        
         $user_login =  $this->input->post();
         
+        $user_id = $this->input->post('USER_ID_FK');
+        $username = $this->input->post('USERNAME');
+        $password = $this->input->post('PASSWORD');
+        $user_type = $this->input->post('USER_TYPE_ID_FK');
         
+        $this->models_login->saveNewUser( $user_id, $username, $password, $user_type );
         
+        echo json_encode( array( "status" => 1 ));
+           
     }
     
     public function saveLoginSession( $user_id ){
-           $data = array(
-                    "user_id" => $user_id,
-                    "is_logged" => 1            
-		);
-        
-        
-        
+        $data = array(
+            "user_id" => $user_id,
+            "is_logged" => 1            
+        );
     }
-    
-    
     
     public function test(){
         $company_name = "test2";
@@ -94,7 +85,6 @@ class Company_Register extends CI_Controller {
         
         
     }
-    
     
     public function saveCompanyId( $company_id ){
         $data = array(

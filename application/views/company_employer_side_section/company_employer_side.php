@@ -1,10 +1,7 @@
 <html>
 	<head>
 	<title>Company Profile </title>
-
 		<link rel="stylesheet" href="<?php echo base_url(); ?>stylesheet/company_employer_side_section/company_employer_side4.css" type="text/css" />
-
-
 	</head>
 
 	<body>
@@ -16,10 +13,8 @@
 		<!-- insert header here -->
 			<?php include_once('includes/header_section/header.php'); ?>
 			<!-- end header here -->
-
 			<br></br>
 		<br></br>
-
 				<div id="prof_pic">
 					<img src="<?php echo base_url().'image/company_profile/logo.jpg'; ?>" id="prof_picture"/>
 				</div>

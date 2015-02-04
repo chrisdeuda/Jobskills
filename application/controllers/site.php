@@ -155,12 +155,33 @@ class Site extends CI_Controller {
 		$this->load->view('survey_skills');
 
 	}
-        
-        public function survey_result(){
+
+    public function survey_result(){
             $this->load->view('survey_result');
 
 	}
-        
+
+	public function default_template(){
+		$data['css'] = array(
+		 	"home" => base_url(). 'public/css/default_template.css',
+		 	'header' => base_url(). 'stylesheet/header_section/header.css',
+		 	'bootstrap' => base_url(). 'stylesheet/bootstrap.min.css'
+
+
+		 );
+		$data['js'] = array(
+		 	"jquery" => base_url(). 'public/js/jquery-2.1.3.min.js',
+		 	"bootstrap_jquery" => base_url(). 'js/bootstrap.min.js',
+		 );
+		$data['title'] = "Default Template";
+
+		$this->load->view('template_default/inc_header',$data);
+		$this->load->view('template_default/home');
+		$this->load->view('template_default/inc_footer');
+
+
+	}
+
 }
 
 

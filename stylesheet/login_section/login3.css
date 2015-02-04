@@ -17,15 +17,15 @@
 /*form signin*/
 #sign_in{
 	margin-left: 10px;
-	height: 400px;
+	height:auto;
 	width: 450px;
 	background-color: #eeebeb;
 	border-radius: 20px;
 	-moz-border-radius:20px;
 	-webkit-border-radius:20px;
 	-moz-box-shadow: 0 0 15px black;
-	 -webkit-box-shadow: 0 0 15px black;
-	  box-shadow: 0 0 15px black; 
+	-webkit-box-shadow: 0 0 15px black;
+	box-shadow: 0 0 15px black;
 }
 
 h1.sign_text{ /*words na sign in*/

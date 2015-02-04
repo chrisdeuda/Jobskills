@@ -49,7 +49,6 @@ $(document).ready(function(){
                 "EMAIL":email_address,
                 "TEL_NO" : telephone_no,
                 "MOBILE_NO" : mobile_no,
-                "FAX_NO" : fax_no,
                 "YR_SERVICE" : 1,
                 "SURVEY_STATUS": 0
                  };

@@ -16,15 +16,19 @@
 
 			<div id="content_container">
 				<div id="job_vacany_post"><!--start of sign in form -->
-						<form class="form-inline">
+						<form id="frm_login" class="form-inline" action="<?php echo base_url(). 'login/login_user';?>" method="POST" role="form">
 							<div class="form-group">
 								<div id="sign_in">
+									<div id="error-message" class="alert alert-danger">
+	                                	<p id="error-header"> <strong> Warning!</strong> Please Check you Username or Password .</p>
+	                                	<p id="error-text"></p>
+	                            	</div>
 									<h1 class="sign_text" >Sign In</h1>
-									<input id="sign_text" type="text" class="form-control input-lg" placeholder="Username"  ></input> <br></br>
-									<input id="pass_text" type="password" class="form-control input-lg" placeholder="Password"  ></input><br> </br>
+									<input id="sign_text" type="text" class="form-control input-lg" placeholder="Username"  /><br></br>
+									<input id="pass_text" type="password" class="form-control input-lg" placeholder="Password"  /><br> </br>
 									<div id="check_login">
 										<label><input type="checkbox" > Remember me</input></label>
-										<button class="login_button btn-lg">Log In</button>
+										<button id="btn_login"class="login_button btn-lg">Log In</button>
 									</div>
 								</div>
 							</div>
@@ -46,6 +50,7 @@
 								</div>
 							</div>
 						</form>
+						<script src="<?php echo base_url().'public/js/login_validation.js'; ?>" type="text/javascript"> </script>
 			</div>
 
 				</div>	<!--end sign in form -->

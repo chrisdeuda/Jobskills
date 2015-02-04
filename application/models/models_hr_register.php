@@ -33,7 +33,7 @@ class Models_Hr_Register extends MY_Model{
         
     }
 
-
+   
 
 
 
