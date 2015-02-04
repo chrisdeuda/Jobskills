@@ -2,21 +2,12 @@
 
 class Site extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see http://codeigniter.com/user_guide/general/urls.html
-	 */
+	public function __construct(){
+	   parent::__construct();
+       $this->load->model('models_survey');
+       $this->load->library('template');
+	}
+
 	public function index()
 	{
 		$this->home_main();
@@ -162,25 +153,14 @@ class Site extends CI_Controller {
 	}
 
 	public function default_template(){
-		$data['css'] = array(
-		 	"home" => base_url(). 'public/css/default_template.css',
-		 	'header' => base_url(). 'stylesheet/header_section/header.css',
-		 	'bootstrap' => base_url(). 'stylesheet/bootstrap.min.css'
-
-
-		 );
-		$data['js'] = array(
-		 	"jquery" => base_url(). 'public/js/jquery-2.1.3.min.js',
-		 	"bootstrap_jquery" => base_url(). 'js/bootstrap.min.js',
-		 );
-		$data['title'] = "Default Template";
+		$data = $this->template->get_default_assets();
+		$data['css']['home'] = base_url().'stylesheet/home_section/home1.css';
 
 		$this->load->view('template_default/inc_header',$data);
 		$this->load->view('template_default/home');
 		$this->load->view('template_default/inc_footer');
-
-
 	}
+
 
 }
 
