@@ -148,11 +148,12 @@ class Site extends CI_Controller {
 	}
 
     public function survey_result(){
-            $this->load->view('survey_result');
+    	$this->load->view('survey_result');
 
 	}
-
+	//copy this template to create new page
 	public function default_template(){
+		//$this->output->enable_profiler(true);
 		$data = $this->template->get_default_assets();
 		$data['css']['home'] = base_url().'stylesheet/home_section/home1.css';
 
@@ -160,6 +161,32 @@ class Site extends CI_Controller {
 		$this->load->view('template_default/home');
 		$this->load->view('template_default/inc_footer');
 	}
+
+
+	public function test_login(){
+		//$this->output->enable_profiler(true);
+		$data = $this->template->get_default_assets();
+		$data['css']['home'] = base_url().'stylesheet/home_section/home1.css';
+		$data['css']['login'] = base_url().'public/css/test_login.css';
+
+
+
+
+		$this->load->view('template_default/inc_header',$data);
+		$this->load->view('test_login');
+		$this->load->view('template_default/inc_footer');
+	}
+	public function default_registration(){
+		//$this->output->enable_profiler(true);
+		$data = $this->template->get_default_assets();
+		$data['css']['home'] = base_url().'stylesheet/home_section/home1.css';
+		$data['css']['registration'] = base_url().'public/css/test_registration.css';
+
+		$this->load->view('template_default/inc_header',$data);
+		$this->load->view('test_registration');
+		$this->load->view('template_default/inc_footer');
+	}
+
 
 
 }

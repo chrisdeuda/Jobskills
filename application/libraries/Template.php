@@ -18,6 +18,7 @@ class Template {
         return $data;
 
     }
+
 }
 
 /* End of file Someclass.php */
