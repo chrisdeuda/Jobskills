@@ -71,6 +71,3 @@
                         </form>
                     </div>
         </div> <!--end div: header_container-->
-            <div>
-                <p>Home | Link1 | Link2 | Link3 </p>
-            </div>
