@@ -13,12 +13,12 @@
 #content_container{
 	margin:auto;
 	width: 1200px;
-	
+
+
 }
 /*form signin*/
 #sign_in{
 	margin-left: 10px;
-	height:auto;
 	width: 450px;
 	background-color: #eeebeb;
 	border-radius: 20px;
@@ -27,6 +27,7 @@
 	-moz-box-shadow: 0 0 15px black;
 	-webkit-box-shadow: 0 0 15px black;
 	box-shadow: 0 0 15px black;
+
 }
 
 h1.sign_text{ /*words na sign in*/
@@ -56,19 +57,23 @@ input#pass_text{ /*textbox ng password*/
 .login_button{ /*button ng login*/
 	background-color: #19b5fe;
 	width: 150px;
+	height: 50px;
 	font-family: lato;
-	font-size: 40px;
+	font-size: 30px;
+	line-height: 20px;
 	font-weight: bold;
 	color: white;
+
 
 }
 .login_button:hover{
 	background-color:  #4FC1E9;
 }
 #check_login{
-	float: right;
-	margin-right: 20px;
-	margin-top: -10px;
+	width: 300px;
+	padding: 10px;
+	margin-left: 150px;
+
 }
 #checkbox{ /*checkbox*/
 	font-size: 15px;
@@ -109,15 +114,13 @@ input#pass_text{ /*textbox ng password*/
 	color:#3f3f3f;
 	margin-left: 20px;
 }
-.register_button{ /*button ng register now*/
-	margin-top: 10px;
-	margin-left:100px;
-	background-color: #19b5fe;
-	width: 400px;
-	height: 70px;
+.register_button{
+	height:70px;
+	width:400px;
+	font-size:40px;
+	font-family:lato;
 	color:white;
-	text-align: center;
-
+	background-color:#19b5fe;
 }
 .register_button:hover{
 	background-color:  #4FC1E9;

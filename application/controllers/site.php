@@ -70,10 +70,6 @@ class Site extends CI_Controller {
 	public function profile_main(){
 		$this->load->view('profile');
 	}
-	// register form
-	public function register_main(){
-		$this->load->view('register_section/register');
-	}
 	// statistic page
 	public function statistic_main(){
 		$this->load->view('statistic_section/statistic');
@@ -117,7 +113,8 @@ class Site extends CI_Controller {
 		$this->load->view('description_section/description');
 	}
 
-
+	// registration section of the company
+	
 
 
 	 // testing section
@@ -162,31 +159,66 @@ class Site extends CI_Controller {
 		$this->load->view('template_default/inc_footer');
 	}
 
-
-	public function test_login(){
+	// login with template
+	public function default_login(){
 		//$this->output->enable_profiler(true);
 		$data = $this->template->get_default_assets();
 		$data['css']['home'] = base_url().'stylesheet/home_section/home1.css';
-		$data['css']['login'] = base_url().'public/css/test_login.css';
-
-
+		$data['css']['login'] = base_url().'public/css/login_section/login.css';
+		$data['title'] = "Log In";
 
 
 		$this->load->view('template_default/inc_header',$data);
-		$this->load->view('test_login');
+		$this->load->view('login_section/login');
 		$this->load->view('template_default/inc_footer');
 	}
+
+	// registration of the company with template
 	public function default_registration(){
 		//$this->output->enable_profiler(true);
 		$data = $this->template->get_default_assets();
 		$data['css']['home'] = base_url().'stylesheet/home_section/home1.css';
-		$data['css']['registration'] = base_url().'public/css/test_registration.css';
+		$data['css']['registration'] = base_url().'public/css/company_registration_section/company_registration.css';
+		$data['title'] = "Company Registration";
+
+
 
 		$this->load->view('template_default/inc_header',$data);
-		$this->load->view('test_registration');
+		$this->load->view('company_registration_section/company_registration');
+		$this->load->view('template_default/inc_footer');
+	}
+	// post job with template
+	
+	public function default_post_job(){
+		//$this->output->enable_profiler(true);
+		$data = $this->template->get_default_assets();
+		$data['css']['home'] = base_url().'stylesheet/home_section/home1.css';
+		$data['css']['registration'] = base_url().'public/css/post_job_section/post_job.css';
+		$data['title'] = "Post Job";
+
+
+
+		$this->load->view('template_default/inc_header',$data);
+		$this->load->view('post_job_section/post_job');
 		$this->load->view('template_default/inc_footer');
 	}
 
+	// company employer side with template
+	public function default_company_profile(){
+		//$this->output->enable_profiler(true);
+		$data = $this->template->get_default_assets();
+		$data['css']['home'] = base_url().'stylesheet/home_section/home1.css';
+		$data['css']['registration'] = base_url().'public/css/company_employer_side_section/company_employer_side.css';
+		$data['title'] = "Company Profile";
+
+
+
+		$this->load->view('template_default/inc_header',$data);
+		$this->load->view('company_employer_side_section/company_employer_side');
+		$this->load->view('template_default/inc_footer');
+	}
+
+	
 
 
 }

@@ -2,7 +2,7 @@
 			<div id="container_form">
 				<div id="divider">
 					<h1 id="welcome_text"><b>Welcome to Company Registration </b></h1>
-					<h2 id="description_text">Please fill up the following form above so that you can register your company and you can access the services of this site. Please make sure that all the details you fill up is valid.</h2>
+					<h2 id="description_text">Please fill up the following form below so that you can register your company and you can access the services of this site. Please make sure that all the details you fill up is valid.</h2>
 				</div>
 				<h3 id="company_text">Company Personal Information</h3>
 				<div id="details">
@@ -81,14 +81,14 @@
 					        	<li>PRODUCTION AND RELATED WORKERS TRANSPORT EQUIPMENT OPERATORS AND LABORERS</li>
 					        	<li>PROFESSIONAL TECHNICAL AND RELATED WORKERS </li>
 					        	<li>PROFESSIONAL TECHNICAL AND RELATED WORKERS  </li>      
-					        	                                                                                                 </li>                                                                                                         </li>
+					        	                                                                                                                                                                                                          </li>
 					        </div>
 					      </div>
 					      <div class="modal-footer">
 					        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					        <button style="background-color:#19b5fe;color:white;font-size:15px;width:55px;height:32px;" type="button" class="btn btn-primary">OK</button>
 					      </div>
-					       </div>
+					    </div>
 					  </div>
 					</div><br/>
 					 <input style="width:200px" type="text" class="form-control" id="type_of_business" ></center><br/>
@@ -122,8 +122,10 @@
 
 						
 					 </form>
-					 <button style="background-color:#19b5fe;color:white;font-size:20px;width:200px;" type="button" class="btn btn-lg">Add Products</button><br></br>
-					 <button style="float:right;margin-right:20px;background-color:#19b5fe;color:white;font-size:20px;width:100px;" type="button" class="btn btn-lg">Next</button>
+					 <button style="background-color:#19b5fe;color:white;font-size:20px;width:150px;" type="button" class="btn btn-lg">Add Products</button><br>
+					 <div style="margin-left:650px;padding:10px;" id="next_button">
+					 	<button style="background-color:#19b5fe;color:white;font-size:20px;width:100px;" type="button" class="btn btn-lg">Next</button>
+					</div>
 				</div>
 				
 			</div>

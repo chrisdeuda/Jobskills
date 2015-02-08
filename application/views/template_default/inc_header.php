@@ -33,8 +33,8 @@
                                     <li class="btn-group">
                                         <button class="btn_login" data-toggle="dropdown">Employers <span class="caret"></span></button>
                                         <ul class="sub_menu_login dropdown-menu" role="menu">
-                                            <li ><a  href="<?php echo base_url().'site/login_main'; ?>">Login</a></li>
-                                            <li ><a  href="<?php echo base_url().'site/register_main'; ?>">Sign Up</a></li>
+                                            <li ><a  href="<?php echo base_url().'site/default_login'; ?>">Login</a></li>
+                                            <li ><a  href="<?php echo base_url().'site/default_registration'; ?>">Sign Up</a></li>
                                         </ul>
                                     </li>
                                 </div>

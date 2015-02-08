@@ -1,0 +1,91 @@
+/*1st divider*/
+#title_section{
+	border-bottom: 1px solid #828282;
+
+}
+#post_job_text{
+	color:orange;
+	font-size: 20px;
+	font-family: lato;
+	font-weight: bold;
+
+}
+/*skills required text*/
+#skils_required{
+	margin-left: 10px;
+	margin-top: 0px;
+	font-size: 20px;
+	font-family: lato;
+	background-color: #FFFF66;
+}
+/*all text*/
+#text1{
+	font-size: 15px;
+	font-family: lato;
+}
+.form-control{
+	width: 250px;
+	padding: 3px;
+}
+label{
+	font-family: Lato;
+	font-size: 15px;
+}
+#buttons{
+	background-color: #828282;
+	color: white;
+	font-size: 15px;
+	width: 100px;
+	height: 30px;
+	font-family: Lato;
+}
+
+#btn-ins{
+	background-color: #828282;
+	color: white;
+	font-size: 10px;
+	width: 100px;
+	height: 20px;
+	font-family: Lato;
+}
+#reg-form{
+	padding: 10px;
+	font-family: Lato;
+	margin: 0px;
+
+}
+
+#reminder{
+	font-family: lato;
+	font-size: 15px;
+	color:#3f3f3f;
+}
+
+#com-reg{
+	background-color: #eeebeb;
+	max-width: 500px;
+	margin: auto;
+	padding-left: 15px;
+}
+
+#comname-text, #comadd-text{
+	width: 300px;
+}
+
+select, #ed-back{
+	width: 400px;
+	font-size: 20px;
+}
+
+#buttons{
+	background-color: #19b5fe;
+	color: white;
+	width: 150px;
+	height: 50px;
+	font-size: 20px;
+	font-family: Lato;
+}
+
+#buttons:hover{
+	background-color: #4FC1E9;
+}

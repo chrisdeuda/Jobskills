@@ -23,7 +23,7 @@
 	margin-top: 0px;
 	font-size: 20px;
 	font-family: lato;
-	background-color: #FFC125;
+	background-color: #FFFF66;
 }
 /*text*/
 #text1{
@@ -40,7 +40,7 @@
 	margin-top: 0px;
 	font-size: 20px;
 	font-family: lato;
-	background-color: #FFFF66;
+	background-color:#FFFF66;
 }
 
 #details{
@@ -152,7 +152,7 @@ label{
 }
 /*container of the form */
 #container_form{
-	height: 1000px;
+	
 	width: 800px;
 	margin: auto;
 	background-color:#eeebeb;
@@ -192,3 +192,6 @@ select{
 	-webkit-border-radius:5px;
 }
 /*submit button*/
+
+
+

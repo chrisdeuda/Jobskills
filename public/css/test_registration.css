@@ -1,6 +1,197 @@
-#fuckers{
-    background-color:pink;
+/*diver inside the form*/
+#divider{
+	border-bottom: 1px solid #828282;
+	margin-left: 10px;
 }
+/*welcome text*/
+#welcome_text{
+	color:orange;
+	font-size: 20px;
+	font-family: lato;
+	font-weight: bold;
+
+}
+/*description below the welcome sign*/
+#description_text{
+	font-family: lato;
+	font-size: 15px;
+	color:#3f3f3f;
+}
+/*the text of company info*/
+#company_text{
+	margin-left: 10px;
+	margin-top: 0px;
+	font-size: 20px;
+	font-family: lato;
+	background-color: #FFC125;
+}
+/*text*/
+#text1{
+	font-size: 15px;
+	font-family: lato;
+}
+/*second detail*/
+#second_details{
+	border-top: 1px solid #828282;
+	margin-left: 10px;
+}
+/*nature business text*/
+#nature_text{
+	margin-top: 0px;
+	font-size: 20px;
+	font-family: lato;
+	background-color: #FFC125;
+}
+
+#details{
+	margin-left: 20px;
+}
+/*inside the modal description text*/
+#description_main_economic{
+	font-family: lato;
+	font-size: 10px;
+	
+
+}
+/*major product text*/
+#major_product_text{
+	font-size: 20px;
+	font-family: lato;
+	float: left;
+}
+/*listbox from sub category*/
+#list_box{
+	width: 300px;
+	height: 200;
+	margin-left:-150px;
+	overflow: scroll;
+
+}
+/*description in nature business*/
+#description_main_economic{
+	font-size: 20px;
+	font-family: lato;
+}
+/*inside the modal the list*/
+#list_economic_activity{
+	text-align:left; 
+}
+.form-control{
+	width: 250px;
+	padding: 3px;
+
+}
+label{
+	font-family: lato;
+	font-size: 17px;
+	color: #3b3a3a;
+	font-weight:bold;
+}
+.button{
+	background-color:#19b5fe;
+	color: white;
+	font-size: 20px;
+	width: 250px;
+	height: 45px;
+	font-family: Lato;
+
+
+}
+.button:hover{
+	background-color:  #4FC1E9;
+}
+#button_text{
+	color: white;
+	text-decoration: none;
+
+}
+#button_text:hover{
+	color: white;
+	text-decoration: none;
+
+}
+
+.insert_button{
+	background-color: #19b5fe;
+	color: white;
+	margin-left: -20px;
+	font-size: 15px;
+	width: 200px;
+	height: 45px;
+	font-family: Lato;
+}
+#btn-ins{
+	background-color: #828282;
+	color: white;
+	font-size: 10px;
+	width: 100px;
+	height: 20px;
+	font-family: Lato;
+}
+
+#reg-form{
+	padding: 10px;
+	width: 80%;
+	font-family: Lato;
+}
+
+#com-logo{
+	float: right;
+	min-width: 150px;
+	max-width: 150px;
+	min-height: 170px;
+	max-height: 170px;
+}
+
+#pic{
+	border: 1px solid black;
+	min-width: 150px;
+	max-width: 150px;
+	min-height: 150px;
+	max-height: 150px;
+}
+/*container of the form */
+#container_form{
+	height: 1000px;
+	width: 800px;
+	margin: auto;
+	background-color:#eeebeb;
+	
+	
+}
+
+#comname-text, #comadd-text{
+	width: 300px;
+}
+
+#yahoo{
+	width: 100px;
+}
+select{
+	width: 300px;
+}
+input#telephone_no{
+	width: 225px;
+}
+input#mobile_no{
+	width: 200px;
+}
+input#fax_no{
+	width: 200px;
+}
+input#email_address{
+	width: 225px;
+}
+input#industry_type{
+	width: 225px;
+}
+select{
+	width: 250px;
+	height:45px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+/*submit button*/
 
 
 
