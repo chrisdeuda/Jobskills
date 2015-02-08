@@ -9,6 +9,7 @@
     </head>
     <body>
         <div id="main_container">
+<<<<<<< HEAD
             <div  id="header_container">
                     <form class="form-inline">
                         <div class="form-group">
@@ -71,6 +72,9 @@
                         </form>
                     </div>
         </div> <!--end div: header_container-->
+
+=======
             <div>
                 <p>Home | Link1 | Link2 | Link3 </p>
             </div>
+>>>>>>> Restore Default Template Value
