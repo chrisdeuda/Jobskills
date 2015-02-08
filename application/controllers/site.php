@@ -114,7 +114,7 @@ class Site extends CI_Controller {
 	}
 
 	// registration section of the company
-	
+
 
 
 	 // testing section
@@ -166,6 +166,7 @@ class Site extends CI_Controller {
 		$data['css']['home'] = base_url().'stylesheet/home_section/home1.css';
 		$data['css']['login'] = base_url().'public/css/login_section/login.css';
 		$data['title'] = "Log In";
+		$data['js']['login'] =  base_url().'public/js/login_validation.js';
 
 
 		$this->load->view('template_default/inc_header',$data);
@@ -188,7 +189,7 @@ class Site extends CI_Controller {
 		$this->load->view('template_default/inc_footer');
 	}
 	// post job with template
-	
+
 	public function default_post_job(){
 		//$this->output->enable_profiler(true);
 		$data = $this->template->get_default_assets();
@@ -211,14 +212,12 @@ class Site extends CI_Controller {
 		$data['css']['registration'] = base_url().'public/css/company_employer_side_section/company_employer_side.css';
 		$data['title'] = "Company Profile";
 
-
-
 		$this->load->view('template_default/inc_header',$data);
 		$this->load->view('company_employer_side_section/company_employer_side');
 		$this->load->view('template_default/inc_footer');
 	}
 
-	
+
 
 
 }

@@ -13,14 +13,12 @@
 						<form class="form-inline">
 			  					<label for="service_offered" id="text1">Skills</label>
 			  				<select style="width:250px;height:35px;margin-left:130px;font-size:15px;" id="skills" >
-
 									<option value="lorem1">Communications Skills</option>
 									<option value="lorem2">Analytical/Research Skills</option>
 									<option value="lorem3">Computer/Technical Literacy</option>
 									<option value="lorem3">Managing Multiple Priorities</option>
-								
 							</select>
-		 
+
 						</form>
 						<form class="form-inline">
 			  					<label for="service_offered" id="text1">Skills Requirement</label>
@@ -31,11 +29,11 @@
 									<option value="lorem3">Computer/Technical Literacy</option>
 									<option value="lorem3">Digital photography</option>
 									<option value="5">Digital video editing</option>
-								
+
 							</select>
-			 
+
 						</form>
-						
+
 						<label for="educational_background" id="text1">Educational Background</label>
 						<input style="margin-left:10px;width:410px" type="text" class="form-control" id="educational_background" ><br>
 						<label for="work_experience" id="text1">Work Experience</label>

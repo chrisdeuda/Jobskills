@@ -42,8 +42,8 @@
 								        	<li style="list-style-type:none;"><input style="margin-left:100px;width:300px;margin-top:-30px;" type="text" class="form-control" id="email_add" ></li></br>
 								        	<li style="list-style-type:none;text-align:left;"><label for="contact" id="text1">Contact:</label></li>
 								        	<li style="list-style-type:none;"><input style="margin-left:100px;width:300px;margin-top:-30px;" type="text" class="form-control" id="contact" ></li> </br>
-								        	 
-								        	  
+
+
 								      	</div>
 							      </center>
 							     </div>
@@ -61,7 +61,7 @@
 						<!-- sample end -->
 
 						<br/>
-						<div class="alert alert-warning"> Click "Add HR" to add Human Resource Manager </div> 
+						<div class="alert alert-warning"> Click "Add HR" to add Human Resource Manager </div>
 						<div id="hr1">
 							<h4><b>Hazel Maneja</b></h4>
 							<p id="hr-details">hazelmaneja@yahoo.com</p>
@@ -76,15 +76,18 @@
 
 				</div>
 				<div class="col-lg-8" style="padding: 15px;">
-					
+
 					<div id="job-list">
 						<h2><b> Job Offerings </b> </h2>
 
+						<a style="color:white;font-size:20px;background-color:#19b5fe;"  class="btn btn-lg"  href="<?php echo base_url().'site/default_post_job';?>" >Post Job</a>
+						<!--
+
 						<div id="add-hr-btn">
-							<input type="submit" id="add-hr" value="POST JOB" href="#openModal"/>
-						</div>
+							<<button  id="add-hr" value="POST JOB" href="#openModal"/>sdfsdf <
+						</div> -->
 						<br/>
-						<div class="alert alert-warning"> Click "POST JOB" to add jobs in your profile. </div> 
+						<div class="alert alert-warning"> Click "POST JOB" to add jobs in your profile. </div>
 						<div id="po-jb">
 							<h3><b>Computer Skills<b><h3>
 							<p id="jb-details"><b>Required:</b> C++ Programmer, PHP Programmer, Database Manager, Encoder, Adobe Photoshop Proficient </p>

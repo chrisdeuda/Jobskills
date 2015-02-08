@@ -35,7 +35,7 @@
 								</div>
 							</div>
 						</form>
-						<script src="<?php echo base_url().'public/js/login_validation.js'; ?>" type="text/javascript"> </script>
+						<!-- <script src="<?php echo base_url().'public/js/login_validation.js'; ?>" type="text/javascript"> </script>-->
 				</div>
 				<!--end sign in form -->
 		</div>
