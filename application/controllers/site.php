@@ -212,7 +212,7 @@ class Site extends CI_Controller {
 	public function default_company_profile(){
 		//$this->output->enable_profiler(true);
 		$data = $this->template->get_default_assets();
-		$data['css']['home'] = base_url().'stylesheet/home_section/home1.css';
+		//$data['css']['home'] = base_url().'stylesheet/home_section/home1.css';
 		$data['css']['registration'] = base_url().'public/css/company_employer_side_section/company_employer_side.css';
 
 		$data['title'] = "Company Profile";
