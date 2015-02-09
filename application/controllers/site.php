@@ -144,7 +144,7 @@ class Site extends CI_Controller {
 
 	}
 
-    public function survey_result(){
+        public function survey_result(){
     	$this->load->view('survey_result');
 
 	}
@@ -195,6 +195,10 @@ class Site extends CI_Controller {
 		$data = $this->template->get_default_assets();
 		$data['css']['home'] = base_url().'stylesheet/home_section/home1.css';
 		$data['css']['registration'] = base_url().'public/css/post_job_section/post_job.css';
+		$data['css']['jquery_ui_plugin'] = base_url(). 'public/css/jquery-ui.min.css';
+
+		//$data['js']['jquery_ui'] = base_url().'public/js/jquery-ui.min.js';
+		$data['js']['jquery_job_validate'] = base_url().'public/js/company_profile/job_post_script.js';
 		$data['title'] = "Post Job";
 
 
@@ -210,11 +214,17 @@ class Site extends CI_Controller {
 		$data = $this->template->get_default_assets();
 		$data['css']['home'] = base_url().'stylesheet/home_section/home1.css';
 		$data['css']['registration'] = base_url().'public/css/company_employer_side_section/company_employer_side.css';
+
 		$data['title'] = "Company Profile";
 
 		$this->load->view('template_default/inc_header',$data);
 		$this->load->view('company_employer_side_section/company_employer_side');
 		$this->load->view('template_default/inc_footer');
+	}
+
+	public function test_jquery(){
+		$this->load->view('jquery_ui_test');
+
 	}
 
 

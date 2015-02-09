@@ -5,6 +5,7 @@
 
         <?php require_once( 'includes/title_link_script.php') ; ?>
         <?php require_once( 'includes/css_link_script.php') ; ?>
+        <?php require_once( 'includes/js_link_script.php') ; ?>
 
     </head>
     <body>

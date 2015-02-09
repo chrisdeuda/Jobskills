@@ -10,41 +10,68 @@
 					</div>
 						<h3 id="skils_required">Skills Required</h3>
 					<div id="reg-form">
-						<form class="form-inline">
-			  					<label for="service_offered" id="text1">Skills</label>
-			  				<select style="width:250px;height:35px;margin-left:130px;font-size:15px;" id="skills" >
-									<option value="lorem1">Communications Skills</option>
-									<option value="lorem2">Analytical/Research Skills</option>
-									<option value="lorem3">Computer/Technical Literacy</option>
-									<option value="lorem3">Managing Multiple Priorities</option>
-							</select>
 
-						</form>
-						<form class="form-inline">
-			  					<label for="service_offered" id="text1">Skills Requirement</label>
-			  				<select style="width:250px;height:35px;margin-left:40px;font-size:15px;" id="skills" >
+						<form id="myForm" class="form-inline" action="<?php echo base_url().'api/save_survey_form'; ?>" method="POST">
+							<div id="error_message" class="alert alert-danger sr-only" > </div>
+							<div id="success_message" class="alert alert-success sr-only" > </div>
 
-									<option value="lorem1">Strong typographic skills</option>
-									<option value="lorem2">Experience with MySQL databases</option>
-									<option value="lorem3">Computer/Technical Literacy</option>
-									<option value="lorem3">Digital photography</option>
-									<option value="5">Digital video editing</option>
+								<label for="service_offered" id="text1">Title/Position</label>
+			  					<select id="job_title" style="width:100%;height:35px;margin-left:40px;font-size:15px;" id="skills" >
 
-							</select>
+								</select>
+							</div>
 
-						</form>
+							<div class="form-group">
+								<label for="people_needed" for="skills_need_count">No. of People Needed</label>
+								<select  id="skills_need_count"  style="width:250px;height:35px;margin-left:40px;font-size:15px;">
+									<?php
+										for ($index = 5; $index < 200; $index = $index + 5) {
+											echo "<option value=". $index.">".$index."</option>";
+										}
+									?>
+								</select>
+							</div> <br>
 
+							<label for="educational_background" for="requirements_description">Requirements Description</label>
+							<textarea id="requirements_description" class="form-control" rows="12" width="100%"></textarea>
+
+						<!-- @remove
 						<label for="educational_background" id="text1">Educational Background</label>
 						<input style="margin-left:10px;width:410px" type="text" class="form-control" id="educational_background" ><br>
 						<label for="work_experience" id="text1">Work Experience</label>
 						<input style="margin-left:10px;width:410px" type="text" class="form-control" id="work_experience" ><br>
 						<label for="certification_req" id="text1">Certification Required</label>
 						<input style="margin-left:10px;width:410px" type="text" class="form-control" id="certification_req" ><br>
-						<center>
+						-->
 
-							<button style="margin-right:-350px;background-color:#19b5fe;color:white;font-size:20px;width:100px;"  type="button" class="btn btn-lg">Next</button>
-						</center>
+							<button  id="btn_submit" style="margin-right:-350px;background-color:#19b5fe;color:white;font-size:20px;width:100px;"  type="button" class="btn btn-lg">Save</button>
+
+						</form>
+
+
+
 					</div>
 				</div>
+
+
+				<div id="requirement_modal" class="modal fade" role="dialog">
+				  <div class="modal-dialog">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				        <h4 class="modal-title strong">Select Title / Position</h4>
+				      </div>
+				      <div class="modal-body">
+				        <p>One fine body&hellip;</p>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				        <button type="button" class="btn btn-primary">Save changes</button>
+				      </div>
+				    </div><!-- /.modal-content -->
+				  </div><!-- /.modal-dialog -->
+				</div><!-- /.modal -->
+
+
 	</div>
 	<!-- end of main container -->

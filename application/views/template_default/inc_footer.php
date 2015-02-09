@@ -33,6 +33,6 @@
         </div> <!--end div: main_container-->
 
     </body>
-        <?php require_once( 'includes/js_link_script.php') ; ?>
+
 
 </html>
