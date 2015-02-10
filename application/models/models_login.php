@@ -42,7 +42,19 @@ class Models_Login extends MY_Model{
         
     }
 
-  
+    public function get_user_type( $user_id ){
+        $sql = " SELECT `USER_TYPE_ID_FK` FROM `login`"
+                . " WHERE `USER_ID_FK` = {$user_id}";
+                
+        $query = $this->db->query( $sql);
+        if ( $query->num_rows >= 1) {
+            $result = $query->result();
+            return $result[0]->USER_TYPE_ID_FK;
+        } else {
+            return -1;
+        }
+        
+    }
   
     
 

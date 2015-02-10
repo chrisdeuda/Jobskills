@@ -4,13 +4,13 @@ class Site extends CI_Controller {
 
 	public function __construct(){
 	   parent::__construct();
-       $this->load->model('models_survey');
-       $this->load->library('template');
+            $this->load->model('models_survey');
+            $this->load->library('template');
 	}
 
 	public function index()
 	{
-		$this->home_main();
+		$this->default_template();
 	}
 	// header
 	public function header_main(){
@@ -210,16 +210,26 @@ class Site extends CI_Controller {
 
 	// company employer side with template
 	public function default_company_profile(){
-		//$this->output->enable_profiler(true);
-		$data = $this->template->get_default_assets();
-		//$data['css']['home'] = base_url().'stylesheet/home_section/home1.css';
-		$data['css']['registration'] = base_url().'public/css/company_employer_side_section/company_employer_side.css';
+            $this->load->model('models_company_profile');
+            $user_id = $this->session->userdata('user_id');
+            $company_profile['profile'] = $this->models_company_profile->get_profile( $user_id );
 
-		$data['title'] = "Company Profile";
+            $data = $this->template->get_default_assets();
+            //$data['css']['home'] = base_url().'stylesheet/home_section/home1.css';
+            $data['css']['registration'] = base_url().'public/css/company_employer_side_section/company_employer_side.css';
+            $data['js']['add_hr'] = base_url().'public/js/company_profile/add_hr_script.js';
 
-		$this->load->view('template_default/inc_header',$data);
-		$this->load->view('company_employer_side_section/company_employer_side');
-		$this->load->view('template_default/inc_footer');
+            $data['title'] = "Company Profile";
+
+
+            $this->load->view('template_default/inc_header',$data);
+            if ( $company_profile['profile'] == -1) {
+            	$db['error'] = "Can't Found Profile. Check your query in database" ;
+            	$this->load->view('error_page', $db);
+            } else {
+            	$this->load->view('company_employer_side_section/company_employer_side', $company_profile);
+            }
+            $this->load->view('template_default/inc_footer');
 	}
 
 	public function test_jquery(){

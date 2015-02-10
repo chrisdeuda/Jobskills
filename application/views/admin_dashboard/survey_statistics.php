@@ -1,8 +1,11 @@
 <div id="main_container">
-    <div style="margin:auto; width:1200px; height:auto; border:1px solid black; clear:both">
+    <div style="margin:auto; width:1200px; height:auto; clear:both">
 
+        <div id="success_message" class="alert alert-success sr-only" style="width:700px; margin:auto;"> </div>
+        <div id="error_message" class="alert alert-danger sr-only" style="width:900px; margin:auto;" ></div>
 
         <div style="margin:auto; width:700px;">
+          <button id="testme1"> TestMe</button>
           <table class="table table-bordered table-condensed table-hover">
             <thead >
               <tr>
@@ -19,9 +22,5 @@
 
     </div>
     <div style="clear:both"> </div>
-
-
-
-
 
 </div> <!--end div main_container-->

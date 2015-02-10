@@ -94,16 +94,7 @@ $(document).ready(function(){
                         }
                     },
             });
-
-
         }
-
-
-
-
-
-
-
     }
 
 

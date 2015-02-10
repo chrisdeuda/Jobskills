@@ -34,8 +34,18 @@
                                     <li class="btn-group">
                                         <button class="btn_login" data-toggle="dropdown">Employers <span class="caret"></span></button>
                                         <ul class="sub_menu_login dropdown-menu" role="menu">
-                                            <li ><a  href="<?php echo base_url().'site/default_login'; ?>">Login</a></li>
-                                            <li ><a  href="<?php echo base_url().'site/default_registration'; ?>">Sign Up</a></li>
+                                            <?php
+                                                if (  $this->session->userdata('is_logged_in')  == true ) { ?>
+                                                <li ><a  href="<?php echo base_url().'login/logout_user'; ?>">Logout   </a></li>
+
+                                            <?php
+                                                } else { ?>
+                                                    <li ><a  href="<?php echo base_url().'site/default_login'; ?>">Login</a></li>
+                                                    <li ><a  href="<?php echo base_url().'site/default_registration'; ?>">Sign Up</a></li>
+                                            <?php    } ?>
+
+
+
                                         </ul>
                                     </li>
                                 </div>
