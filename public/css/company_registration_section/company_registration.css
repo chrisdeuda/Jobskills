@@ -1,35 +1,53 @@
 /*diver inside the form*/
 #divider{
-	border-bottom: 1px solid #828282;
+	padding: 10px;
 	margin-left: 10px;
+
 }
 /*welcome text*/
 #welcome_text{
-	color:orange;
-	font-size: 20px;
-	font-family: lato;
+	color:#3f3f3f;
+	font-size: 30px;
+	font-family: verdana;
 	font-weight: bold;
+	padding:10px;
 
 }
 /*description below the welcome sign*/
 #description_text{
-	font-family: lato;
+	font-family: verdana;
 	font-size: 15px;
 	color:#3f3f3f;
 }
 /*the text of company info*/
 #company_text{
+	border-top: 1px solid #828282;
 	margin-left: 10px;
 	margin-top: 0px;
 	font-size: 20px;
-	font-family: lato;
-	background-color: #FFFF66;
+	font-weight: bold;
+	font-family: verdana;
+	background-color: #4FC1E9;
+	
 }
 /*text*/
 #text1{
 	font-size: 15px;
-	font-family: lato;
+	font-family: verdana;
+	
+
+
 }
+#text2{
+	margin-left: 15px;
+	font-size: 15px;
+}
+#text_box3{
+	margin-left: 15px;
+	width: 230px;
+	
+}
+
 /*second detail*/
 #second_details{
 	border-top: 1px solid #828282;
@@ -39,24 +57,89 @@
 #nature_text{
 	margin-top: 0px;
 	font-size: 20px;
-	font-family: lato;
-	background-color:#FFFF66;
+	font-family:verdana;
+	border-top: 1px solid #828282;
+	font-weight: bold;
+	background-color:#4FC1E9;
+	margin-top: 10px;
 }
+/*textbox in the first part*/
+#text_box1{
+	width: 400px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+/*main economic business textbox*/
+.text_box2{
+	margin-left: 100px;
 
+}	
+	
+
+	
+
+#submit{
+	padding: 10px;
+}
+#size_box{
+	width: 500px;
+	margin-bottom: 10px;
+}
+/*button search*/
+.button_search{
+	width: 80px;
+	margin-right:70px;
+
+}
+/*button submit*/
+.button_submit{
+	margin-left: 670px;
+	padding: 10px;
+	margin-top: -0;
+
+
+}
+/*select tag in number of employees*/
+.employee_no{
+	width:200px;
+	height:35px;
+	margin-left:55px;
+}
+/*nationality text*/
+#nationality{
+	width:200px;
+	height:35px;
+	margin-left:20px;
+	
+
+}
 #details{
 	margin-left: 20px;
 }
+
+/*text nationality*/
+#nationality_text{
+	font-size: 15px;
+	margin-left: 15px;
+}
+/*number of employees text*/
+#number_employees{
+	font-size: 15px;
+	margin-left: 15px;
+}
 /*inside the modal description text*/
 #description_main_economic{
-	font-family: lato;
+	font-family: verdana;
 	font-size: 10px;
 	
 
 }
+/*nature text section*/
+
 /*major product text*/
 #major_product_text{
 	font-size: 20px;
-	font-family: lato;
+	font-family: verdana;
 	float: left;
 }
 /*listbox from sub category*/
@@ -70,7 +153,7 @@
 /*description in nature business*/
 #description_main_economic{
 	font-size: 20px;
-	font-family: lato;
+	font-family: verdana;
 }
 /*inside the modal the list*/
 #list_economic_activity{
@@ -82,7 +165,7 @@
 
 }
 label{
-	font-family: lato;
+	font-family: verdana;
 	font-size: 17px;
 	color: #3b3a3a;
 	font-weight:bold;
@@ -93,7 +176,7 @@ label{
 	font-size: 20px;
 	width: 250px;
 	height: 45px;
-	font-family: Lato;
+	font-family:verdana;
 
 
 }
@@ -118,7 +201,7 @@ label{
 	font-size: 15px;
 	width: 200px;
 	height: 45px;
-	font-family: Lato;
+	font-family: verdana;
 }
 #btn-ins{
 	background-color: #828282;
@@ -126,13 +209,13 @@ label{
 	font-size: 10px;
 	width: 100px;
 	height: 20px;
-	font-family: Lato;
+	font-family: verdana;
 }
 
 #reg-form{
 	padding: 10px;
 	width: 80%;
-	font-family: Lato;
+	font-family: verdana;
 }
 
 #com-logo{
@@ -156,7 +239,12 @@ label{
 	width: 800px;
 	margin: auto;
 	background-color:#eeebeb;
-	
+	border-radius: 20px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	-moz-box-shadow: 0 0 15px black;
+	-webkit-box-shadow: 0 0 15px black;
+	box-shadow: 0 0 15px black;
 	
 }
 
@@ -170,8 +258,9 @@ label{
 select{
 	width: 300px;
 }
-input#telephone_no{
-	width: 225px;
+#telephone_no{
+	width: 200px;
+
 }
 input#mobile_no{
 	width: 200px;
@@ -191,7 +280,10 @@ select{
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
 }
-/*submit button*/
+/*password padding*/
+#confirm_password{
+	margin-bottom: 10px;
+}
 
 
 

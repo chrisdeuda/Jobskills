@@ -1,15 +1,20 @@
 #footer{
 	margin: auto;
 	width: 1200px;
-	height: 300px;
+	height: 200px;
 	background-color:#656d78;
 }
 
 .description_text{
-	font-family: lato;
+	font-family: verdana;
 	font-size: 10px;
 	color: black;
 
+}
+/*text*/
+#text1{
+	font-family: verdana;
+	font-size: 15px;
 }
 a.description_text:hover{
 	color: black;

@@ -34,50 +34,47 @@ h1.sign_text{ /*words na sign in*/
 	padding: 30px;
 	color:#3f3f3f;
 	font-size: 50px;
-	font-family: lato;
+	font-family:verdana;
 	font-weight: bold;
 }
 input#sign_text{ /*textbox ng sign in*/
 	margin: 20px;
 	width: 400px;
 	height: 50px;
-	font-family: lato;
-	font-size: 30px;
+	font-family: verdana;
+	font-size: 20px;
 
 }
 input#pass_text{ /*textbox ng password*/
 	margin: 20px;
 	width: 400px;
 	height: 50px;
-	font-family: lato;
-	font-size: 30px;
+	font-family: verdana;
+	font-size: 20px;
 
 }
 
-.login_button{ /*button ng login*/
-	background-color: #19b5fe;
+#button_login{ /*button ng login*/
+	
 	width: 150px;
 	height: 50px;
-	font-family: lato;
+	font-family: verdana;
 	font-size: 30px;
 	line-height: 20px;
-	font-weight: bold;
 	color: white;
-
+	padding: 10px;
 
 }
-.login_button:hover{
-	background-color:  #4FC1E9;
-}
+
 #check_login{
 	width: 300px;
-	padding: 10px;
+	padding:10px;
 	margin-left: 150px;
 
 }
 #checkbox{ /*checkbox*/
 	font-size: 15px;
-	font-family: lato;
+	font-family: verdana;
 	font-weight: bold;
 	color: #3f3f3f;
 
@@ -91,14 +88,14 @@ input#pass_text{ /*textbox ng password*/
 }
 #welcome_text{
 	margin-left: 70px;
-	font-family: lato;
+	font-family: verdana;
 	font-size: 100px;
 	font-weight: bold;
 	color:  #4FC1E9;
 }
 #content_welcome{
 	font-size: 10px;
-	font-family: lato;
+	font-family: verdana;
 	color:black;
 	text-align: justify;
 }
@@ -109,7 +106,7 @@ input#pass_text{ /*textbox ng password*/
 }
 #not_registered_text{
 	font-size: 30px;
-	font-family: lato;
+	font-family: verdana;
 	font-weight: bold;
 	color:#3f3f3f;
 	margin-left: 20px;
@@ -118,7 +115,7 @@ input#pass_text{ /*textbox ng password*/
 	height:70px;
 	width:400px;
 	font-size:40px;
-	font-family:lato;
+	font-family:verdana;
 	color:white;
 	background-color:#19b5fe;
 }
@@ -153,4 +150,17 @@ input#pass_text{ /*textbox ng password*/
 input[type='checkbox']{
 	width: 20px;
 	height: 20px;
+}
+/*button register*/
+.button_register{
+	margin-top: 20px;
+	width: 350px;
+	height: 50px;
+	font-family: verdana;
+	font-size: 30px;
+	line-height: 20px;
+	
+	color: white;
+	padding: 10px;
+
 }

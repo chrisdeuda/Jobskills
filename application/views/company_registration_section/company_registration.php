@@ -1,4 +1,5 @@
-   <div id="main_container">
+  <br>
+  <div id="main_container">
 			<div id="container_form">
 				<div id="divider">
 					<h1 id="welcome_text"><b>Welcome to Company Registration </b></h1>
@@ -8,33 +9,36 @@
 				<div id="details">
 					<form role="form-inline" class="form" method="POST" action="<?php echo base_url(). 'welcome/signUpValidation'; ?>">
 						<div class="form-group">
-							<label for="company_name"  class="col-sm-3">Company Name</label>
+							<label for="company_name" id="text1" class="text1 col-sm-3">Company Name</label>
 							<div class="col-sm-9">
-					    		<input style="margin-left:100px;width:460px;" type="text" class="form-control input-sm" id="company_name" name="company_name">
+					    		<input id="text_box1" type="text" class="form-control input-sm" id="company_name" name="company_name">
 					    	</div>
 						</div>
 
 						<div class="form-group">
-							<label for="company_name"  class="col-sm-3">Company Address</label>
+							<label for="company_name" id="text1" class="col-sm-3">Company Address</label>
 							<div class="col-sm-9">
-					    		<input style="margin-left:100px;width:460px;" type="text" class="form-control input-sm" id="company_address" name="address" >
+					    		<input id="text_box1" type="text" class="form-control input-sm" id="company_address" name="address" >
 					    	</div>
 						</div>
-						<div class="form-group">
-							<label for="telephone_no"  class="col-sm-3">Telephone No:</label>
-							<div class="col-sm-9">
-					    		<input style="margin-left:100px;width:460px;" type="text" class="form-control input-sm" id="telephone_no" name="telephone_no">
-					    	</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="telephone_no" id="text2" >Telephone No:</label>
+							    	<input   type="text" id="text_box3" class=" form-control input-sm" id="telephone_no" name="telephone_no">
+							    </div>
+							</div>
+							
+								<div class="form-group">
+									<label for="fax_no" id="text1" >Fax No:</label>
+							    		<input  type="text" id="text_box3" class="form-control input-sm"  id="fax_no" name="fax_no">
+							    	
+								</div>
 						</div>
+
 						<div class="form-group">
-							<label for="fax_no"  class="col-sm-3">Fax No:</label>
-							<div class="col-sm-9">
-					    		<input style="margin-left:100px;width:460px;" type="text" class="form-control input-sm"  id="fax_no" name="fax_no">
-					    	</div>
-						</div>
-						<div class="form-group">
-							<label for="service_offered" id="text1">Number of Employees</label>
-			  				<select style="width:200px;height:35px;margin-left:60px;" id="service_offered"  id="employee_no" type="text" class="" name = "employee_no">
+							<label for="service_offered" id="number_employees">Number of Employees</label>
+			  				<select  id="service_offered"  class="employee_no" type="text" class="" name = "employee_no">
 									<option value="lorem1">100</option>
 									<option value="lorem2">101</option>
 									<option value="lorem3">500</option>
@@ -42,10 +46,10 @@
 						</div>
 
 						<div class="form-group">
-							<label for="nationality_company">Nationality of the Company</label>
+							<label  for="nationality_company" id="nationality_text">Nationality of the Company</label>
 
 							 <?php
-								echo "<select style='width:200px;height:35px;margin-left:60px;'' id='nationality' name = 'nationality' >";
+								echo "<select id='nationality' name = 'nationality' >";
 								foreach($nationality_list as $row){
 
 									echo "<option value = ";
@@ -59,35 +63,53 @@
 						</div>
 
 						<div class="form-group">
-							<label for="username"  class="col-sm-3" >Username</label>
+							<label for="username" id="text1"  class="col-sm-3" >Username</label>
 							<div class="col-sm-9">
-					    		<input style="margin-left:100px;width:460px;" type="text" class="form-control input-sm" id="username" name="username">
+					    		<input id="text_box1" type="text" class="form-control input-sm" id="username" name="username">
 					    	</div>
 						</div>
 
 						<div class="form-group">
-							<label for="company_name"  class="col-sm-3" >Password</label>
+							<label for="company_name" id="text1"  class="col-sm-3" >Password</label>
 							<div class="col-sm-9">
-					    		<input style="margin-left:100px;width:460px;" type="text" class="form-control input-sm"  id="password" name="password" >
+					    		<input id="text_box1" type="text" class="form-control input-sm"  id="password" name="password" >
 					    	</div>
 						</div>
 						<div class="form-group">
-							<label for="company_name"  class="col-sm-3" >Confirm Password</label>
+							<label for="company_name" id="text1"  class="col-sm-3" >Confirm Password</label>
 							<div class="col-sm-9">
-					    		<input style="margin-left:100px;width:460px;" type="text" class="form-control input-sm"  id="confirm_password" name="confirm_password">
+					    		<input id="text_box1" type="text" class="form-control input-sm"  id="confirm_password" name="confirm_password">
 					    	</div>
 						</div>
-
-
-						<h4 id="nature_text">Nature of Business</h4>
-						<lable>Main Economic Business </lable>
-            <input id="business_nature" type="text" class="" > <input type = "button" id="btn_business_nature" value = " Search " />  </br>
-                    <input id="business_nature_result" type="text" class="" name = "business_nature_result" > <br>
-            <lable>Major Products/Goods: </lable>
-            <input id="major_product" type="text" class="" > <input type = "button" id="btn_major_product" value = " Search " />  </br>
-                    <input id="major_product_result" type="text" class="" name = "major_product_result" > <br>
-
-                    <input id="btn_register" type="submit" class="btn btn-info" value="Submit" >
+<br>
+<br>
+<br>
+<br>
+<br>
+</br>					<div id="nature_container">
+							<h4 id="nature_text">Nature of Business</h4>
+						</div>
+						<center><label id="text1" >Main Economic Business </label></center>
+				<div class="input-group">		
+          			<input style="width:500px;margin-bottom:10px;"  id="business_nature"  type="text" class="text_box2 form-control input-sm" >
+        
+          			<span class="input-group-btn">
+          			 	<input type = "button" class=" btn btn-info btn-sm button_search" id="btn_business_nature" value = " Search " />  </br>
+          			</span>
+          		</div>
+          		<input style="width:500px;"  id="business_nature_result" type="text" class="text_box2 form-control input-sm" name = "business_nature_result" > <br>
+                   
+			          <center>  <label id="text1">Major Products/Goods: </label></center>
+			         <div class="input-group">
+			           <input style="width:500px;margin-bottom:10px;" id="major_product" type="text" class="text_box2 form-control input-sm" > 
+			           <span class="input-group-btn">
+			          		<input type = "button" id="btn_major_product" class=" btn btn-info btn-sm button_search" value = " Search " />  </br>
+			         	</span>
+			         </div>
+			            <input style="width:500px;" id="major_product_result" type="text" class="text_box2 form-control input-sm" name = "major_product_result" > <br>
+			       <div id="submit">
+                    	<input  id="btn_register" type="submit" class="btn btn-info btn-lg button_submit" value="Submit" >
+                    </div>
 
 					</form>
 
@@ -97,74 +119,7 @@
 				<div style="clear:both"> </div>
 
 
-				<!-- @REMOVE
-				<div id="second_details">
-					<h4 id="nature_text">Nature of Business</h4>
-					 <h5 style="font-size:15px;font-family:lato;" id="description_main_economic">Choose the Main Economic and Sub major products of your company.</h5>
-					<center><button style="color:white;font-size:20px;background-color:#19b5fe;" type="button" class="btn btn-lg" data-toggle="modal" data-target="#exampleModal" >Main Economic Activity</button><center>
-
-
-					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					  <div class="modal-dialog">
-					    <div class="modal-content">
-					      <div class="modal-header">
-					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					        <h4 style="font-size:30px;" class="modal-title" id="exampleModalLabel">Main Economic Activity</h4>
-					      </div>
-					      <div style="float:left" class="modal-body">
-					        <div  id="list_economic_activity">
-					        	<li>ADMINISTRATIVE AND MANAGERIAL WORKERS</li>
-					        	<li>AGRICULTURAL ANIMAL HUSBANDRY AND FORESTRY WORKERS FISHERMEN AND HUNTERS</li>
-					        	<li>CLERICAL AND  RELATED WORKERS</li>
-					        	<li>PRODUCTION AND RELATED WORKERS TRANSPORT EQUIPMENT OPERATORS AND LABORERS</li>
-					        	<li>PROFESSIONAL TECHNICAL AND RELATED WORKERS </li>
-					        	<li>PROFESSIONAL TECHNICAL AND RELATED WORKERS  </li>
-					        	                                                                                                                                                                                                          </li>
-					        </div>
-					      </div>
-					      <div class="modal-footer">
-					        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					        <button style="background-color:#19b5fe;color:white;font-size:15px;width:55px;height:32px;" type="button" class="btn btn-primary">OK</button>
-					      </div>
-					    </div>
-					  </div>
-					</div><br/>
-					 <input style="width:200px" type="text" class="form-control" id="type_of_business" ></center><br/>
-						 	<div id="sub category">
-								<h5 id="major_product_text">Major Products</h5><br><br/>
-					<form class="form-inline">
-						<div class="form-group">
-								<div id="select_listbox">
-									<select id="list_box" size="5">
-									  <option>ADMINISTRATIVE AND MANAGERIAL WORKERS</option>
-										 <option>GOVERNMENT EXECUTIVES OTHER THAN GOVERNMENT ADMINISTRATORS</option>
-									 	<option>MANAGER BUDGETING AND ACCOUNTING</option>
-										 <option>MANAGER EDUCATIONAL</option>
-										 <option>MANAGER GENERAL</option>
-										 <option>MANAGER INDUSTRIAL RELATIONS AND PERSONNEL</option>
-										 <option>MANAGER OPERATIONS</option>
-										 <option>MANAGER PRODUCTION  (EXCEPT FARM)</option>
-										 <option>MANAGER PROJECT (CONSTRUCTION)</option>
-										 <option>MANAGERS</option>
-										 <option>MANAGERS ( N E C )</option>
-										 <option>MANAGERS ASSISTANT</option>
-										 <option>MANAGERS ASSISTANT ( N E C )</option>
-
-
-									</select>
-								</div>
-						</div>
-								<div class="form-group">
-									<input style="width:300px;height:200px;margin-left:50px;" type="text" class="form-control" id="list_box_output" >
-								</div>
-
-
-					 </form>
-					 <button style="background-color:#19b5fe;color:white;font-size:20px;width:150px;" type="button" class="btn btn-lg">Add Products</button><br>
-					 <div style="margin-left:650px;padding:10px;" id="next_button">
-					 	<button style="background-color:#19b5fe;color:white;font-size:20px;width:100px;" type="button" class="btn btn-lg">Next</button>
-					</div>
-				</div>-->
+				
 
 				<div>
 	<div id = "main_economic_activity" >
@@ -236,7 +191,7 @@
 		$("#main_economic_activity li").click(function(){
 
 			$("#main_economic_activity li").css("background-color","initial");
-			$(this).css("background-color","red");
+			$(this).css("background-color","#4FC1E9");
 			$selected_result = $(this).html();
 			$selected_result = $selected_result.replace(/&amp;/g, "&");
 		});
@@ -286,7 +241,7 @@
 		$("#major_products li").click(function(){
 
 			$("#major_products li").css("background-color","initial");
-			$(this).css("background-color","red");
+			$(this).css("background-color","#4FC1E9");
 			$selected_result = $(this).html();
 			$selected_result = $selected_result.replace(/&amp;/g, "&");
 		});

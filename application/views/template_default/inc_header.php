@@ -41,7 +41,7 @@
                                             <?php
                                                 } else { ?>
                                                     <li ><a  href="<?php echo base_url().'site/default_login'; ?>">Login</a></li>
-                                                    <li ><a  href="<?php echo base_url().'site/default_registration'; ?>">Sign Up</a></li>
+                                                    <li ><a  href="<?php echo base_url().'welcome/index'; ?>">Sign Up</a></li>
                                             <?php    } ?>
 
 

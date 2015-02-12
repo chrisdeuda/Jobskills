@@ -16,14 +16,14 @@
 							<div id="success_message" class="alert alert-success sr-only" > </div>
 
 								<label for="service_offered" id="text1">Title/Position</label>
-			  					<select id="job_title" style="width:100%;height:35px;margin-left:40px;font-size:15px;" id="skills" >
+			  					<select id="job_title" class="position" id="skills" >
 
 								</select>
 							</div>
 
 							<div class="form-group">
-								<label for="people_needed" for="skills_need_count">No. of People Needed</label>
-								<select  id="skills_need_count"  style="width:250px;height:35px;margin-left:40px;font-size:15px;">
+								<label for="people_needed" for="skills_need_count" id="no_people_text">No. of People Needed</label>
+								<select  id="skills_need_count" class="no_people_needed">
 									<?php
 										for ($index = 5; $index < 200; $index = $index + 5) {
 											echo "<option value=". $index.">".$index."</option>";
@@ -32,20 +32,11 @@
 								</select>
 							</div> <br>
 
-							<label for="educational_background" for="requirements_description">Requirements Description</label>
-							<textarea id="requirements_description" class="form-control" rows="12" width="100%"></textarea>
-
-						<!-- @remove
-						<label for="educational_background" id="text1">Educational Background</label>
-						<input style="margin-left:10px;width:410px" type="text" class="form-control" id="educational_background" ><br>
-						<label for="work_experience" id="text1">Work Experience</label>
-						<input style="margin-left:10px;width:410px" type="text" class="form-control" id="work_experience" ><br>
-						<label for="certification_req" id="text1">Certification Required</label>
-						<input style="margin-left:10px;width:410px" type="text" class="form-control" id="certification_req" ><br>
-						-->
-
-							<button  id="btn_submit" style="margin-right:-350px;background-color:#19b5fe;color:white;font-size:20px;width:100px;"  type="button" class="btn btn-lg">Save</button>
-
+							<label for="educational_background" for="requirements_description" id="text2" >Requirements Description</label>
+							<textarea id="requirements_description" class="form-control" rows="12" ></textarea>
+							<div id="submit">
+								<button  id="btn_submit"    type="button" class="btn  btn-info btn-lg">Save</button>
+							</div>
 						</form>
 
 

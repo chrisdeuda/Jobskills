@@ -14,7 +14,7 @@
 										<input id="pass_text" type="password" class="form-control input-lg" placeholder="Password"  /><br> </br>
 									<div id="check_login">
 										<label><input type="checkbox" > Remember me</input></label>
-										<button id="btn_login"class="login_button btn-lg">Log In</button>
+										<button class=" btn-info btn-lg" id="btn_login">Log In</button>
 									</div>
 								</div>
 							</div>
@@ -24,14 +24,14 @@
 										Welcome
 									</div>
 									<div id="content_welcome">
-										<img class="company3" src="<?php echo base_url().'image/content.png';  ?>" width="600" height="150"   >
+										<img class="company3" src="<?php echo base_url().'image/content1.png';  ?>" width="600" height="150"   >
 									</div>
 									<!--Not yet registered -->
 									<div id="not_registered_container">
 										<div id="not_registered_text">
-											Not yet Registered?
+											Not yet registered?
 										</div>
-										<center><button  class="register_button btn-lg" onclick="location.href='<?php echo base_url();?>site/default_registration'">Register Now</button></center></form>
+										<center><button  class="button_register btn-info btn-lg" onclick="location.href='<?php echo base_url();?>site/default_registration'">Register Now</button></center></form>
 								</div>
 							</div>
 						</form>

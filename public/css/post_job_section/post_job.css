@@ -1,34 +1,40 @@
 /*1st divider*/
 #title_section{
-	border-bottom: 1px solid #828282;
+	
 
 }
 #post_job_text{
-	color:orange;
-	font-size: 20px;
-	font-family: lato;
+	color:#3f3f3f;
+	font-size: 30px;
+	font-family: verdana;
 	font-weight: bold;
+	padding:10px;
 
 }
 /*skills required text*/
 #skils_required{
+	border-top: 1px solid #828282;
 	margin-left: 10px;
-	margin-top: 0px;
+	margin-top: 5px;
 	font-size: 20px;
-	font-family: lato;
-	background-color: #FFFF66;
+	font-family: verdana;
+	font-weight: bold;
+	background-color:  #19b5fe;
 }
 /*all text*/
 #text1{
 	font-size: 15px;
-	font-family: lato;
+	font-family: verdana;
+}
+#text2{
+	margin-left: 10px;
 }
 .form-control{
 	width: 250px;
 	padding: 3px;
 }
 label{
-	font-family: Lato;
+	font-family: verdana;
 	font-size: 15px;
 }
 #buttons{
@@ -37,7 +43,7 @@ label{
 	font-size: 15px;
 	width: 100px;
 	height: 30px;
-	font-family: Lato;
+	font-family: verdana;
 }
 
 #btn-ins{
@@ -46,11 +52,11 @@ label{
 	font-size: 10px;
 	width: 100px;
 	height: 20px;
-	font-family: Lato;
+	font-family: verdana;
 }
 #reg-form{
 	padding: 10px;
-	font-family: Lato;
+	font-family:verdana;
 	margin: 0px;
 
 }
@@ -59,13 +65,21 @@ label{
 	font-family: lato;
 	font-size: 15px;
 	color:#3f3f3f;
+	margin-left: 10px;
 }
 
 #com-reg{
 	background-color: #eeebeb;
-	max-width: 500px;
+	width: 500px;
 	margin: auto;
-	padding-left: 15px;
+	background-color:#eeebeb;
+	border-radius: 20px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	-moz-box-shadow: 0 0 15px black;
+	-webkit-box-shadow: 0 0 15px black;
+	box-shadow: 0 0 15px black;
+	
 }
 
 #comname-text, #comadd-text{
@@ -83,9 +97,44 @@ select, #ed-back{
 	width: 150px;
 	height: 50px;
 	font-size: 20px;
-	font-family: Lato;
+	font-family: verdana;
 }
 
 #buttons:hover{
 	background-color: #4FC1E9;
+}
+/*select position*/
+.position{
+	width:400px;
+	height:35px;
+	margin-left:50px;
+	font-size:15px;
+	border-radius: 5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+/*select tag no of people*/
+.no_people_needed{
+	width:250px;
+	height:35px;
+	margin-left:18px;
+	font-size:15px;
+	border-radius: 5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+
+}
+/*text no of people*/
+#no_people_text{
+	font-size: 15px;
+	margin-left: 10px;
+}
+#submit{
+	padding: 10px;
+	margin-left: 390px;
+}
+/*requirements description*/
+#requirements_description{
+	margin-left: 20px;
+	width: 450px;
 }
