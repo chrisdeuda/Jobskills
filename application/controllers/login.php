@@ -13,18 +13,14 @@ class Login extends CI_Controller {
      * exists.
      * @return void
      */
-   
-   
+
     public function login_user(){
-        
+
         $username = $this->input->post('username');
         $password = $this->input->post('password');
-        
+
         //$username = "admin";
         //$password = "admin";
-        
-        
-
         $password_md5 = md5($password);
         $user_id  = $this->models_login->getUserId( $username, $password_md5);
 
@@ -36,28 +32,28 @@ class Login extends CI_Controller {
             echo json_encode($data);
 
         } else {
-            
+
             $this->save_logged_in( $user_id);
             $user_type = $this->models_login->get_user_type($user_id);
-                
+
             //HR
-           
+
             if ( $user_type == 2) {
                 $data = ['status' => true,
                 'message' => "ok",
                 'forward_url' => base_url(). 'admin/manage_survey',
                 ];
                 echo json_encode($data);
-                
+
             } else if ( $user_type == 1) { //admin
                 $data = ['status' => true,
                 'message' => "ok",
                 'forward_url' => base_url(). 'site/default_company_profile',
                 ];
                 echo json_encode($data);
-                
+
             }
-            
+
 
         }
     }
@@ -106,7 +102,7 @@ class Login extends CI_Controller {
 
     }
 
- 
+
 }
 
 ?>

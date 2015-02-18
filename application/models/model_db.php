@@ -26,19 +26,31 @@ class Model_DB extends CI_Model{
 
         return $query->result();
     }
-    public function register(){
+    public function inCompanyList(){
 
-        $new_company = array(
+        $new_row = array(
+
             "COMPANY_NAME" => $_POST["company_name"],
             "COMPANY_STATUS" => 1
         );
+        $this->db->insert("company_list", $new_row);
+    }
+    public function getCompanyListID(){
 
-        $this->db->insert("company_list", $new_company);
+        $query = $this->db->query("SELECT * FROM company_list WHERE COMPANY_NAME = \"" . $_POST["company_name"] . "\"");
 
-        $company_id = $this->db->insert_id();    //get the id of new insert data
+        $row = $query->result();
+
+
+        return intval($row[0]->COMPANY_ID_PK);
+    }
+    public function register(){
+
+        $this->inCompanyList();
 
         $new_row = array(
-            "COMPANY_ID_FK" => $company_id,
+
+            "COMPANY_ID_FK" => $this->getCompanyListID(),
             "COMPANY_NAME" => $_POST["company_name"],
             "COMPLETE_ADDRESS" => $_POST["address"],
             "TEL_NO" => $_POST["telephone_no"],
@@ -48,16 +60,14 @@ class Model_DB extends CI_Model{
             "INDUSTRY_TYPE_FK" => $_POST["business_nature_result"],
             "NATIONALITY_FK" => $_POST["nationality"]
         );
-
         $new_row_login = array(
 
-            "USER_ID_FK" => $company_id,
+            "USER_ID_FK" => $this->getCompanyListID(),
             "USERNAME" => $_POST["username"],
             "PASSWORD" => $_POST["password"],
             "USER_TYPE_ID_FK" => 1
         );
         $this->db->insert("company_profile", $new_row);
         $this->db->insert("login", $new_row_login);
-
     }
 }

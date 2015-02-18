@@ -61,9 +61,6 @@
 							  </div>
 							</div>
 						</div>
-						<!-- sample-->
-
-						<!-- sample end -->
 
 						<br/>
 						<div class="alert alert-warning"> Click "Add HR" to add Human Resource Manager </div>

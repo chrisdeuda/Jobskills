@@ -12,7 +12,7 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		//$this->load->view('welcome_message');
-
+		$this->initializePostVariables();	// initializes the post variables to be use as values of form input elements
 		$this->form_init();
 	}
 	public function form_init(){
@@ -69,8 +69,9 @@ class Welcome extends CI_Controller {
 		}
 		else{
 
-			echo "failed <br />";
-                        print_r($this->form_validation->error_array());
+			//echo "failed <br />";
+              //          print_r($this->form_validation->error_array());
+             $this->form_init();
 			//header('location:'. base_url(). 'welcome/index');
 			//$this->load->view("form_registration");
 		}
@@ -95,6 +96,21 @@ class Welcome extends CI_Controller {
 	public function convertToInt(){	// this method converts the employee no. field from string to integer
 
 		$_POST["employee_no"] = intval($this->input->post("employee_no"));
+	}
+
+	public function initializePostVariables(){
+
+		$_POST["company_name"] = "";
+		$_POST["address"] = "";
+		$_POST["telephone_no"] = "";
+		$_POST["fax_no"] = "";
+		$_POST["employee_no"] = "";
+		$_POST["nationality"] = "";
+		$_POST["username"] = "";
+		$_POST["password"] = "";
+		$_POST["confirm_password"] = "";
+		$_POST["business_nature_result"] = "";
+		$_POST["major_product_result"] = "";
 	}
 }
 
