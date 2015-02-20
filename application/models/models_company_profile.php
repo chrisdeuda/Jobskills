@@ -20,10 +20,6 @@ class Models_Company_Profile extends MY_Model{
                          . ", (SELECT NATIONALITY_NAME FROM `nationality_list` WHERE `NATIONALITY_ID_PK` = NATIONALITY_FK ) as NATIONALITY"
                . " FROM `company_profile`"
                . " WHERE `COMPANY_ID_FK` = $company_id";
-        
-        
-//        echo $sql;
-        
         $query = $this->db->query( $sql);
         if( $query->num_rows >= 1){
             $result = $query->result();
@@ -32,6 +28,20 @@ class Models_Company_Profile extends MY_Model{
             return -1;
         }
     }
+    
+    public function get_all_hr( $company_id ){
+       $sql = " SELECT * FROM `contact_information`"
+            . " WHERE `COMPANY_ID_FK` = '{$company_id}'"
+            . " LIMIT 0, 3";
+       
+       $query = $this->db->query( $sql );
+       if ( $query->num_rows() <= 0) {
+           return -1;
+       }  else {
+           $result = $query->result();
+           return $result;
+       }
+   }
 
 
 

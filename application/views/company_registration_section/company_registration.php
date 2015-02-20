@@ -51,18 +51,24 @@
 						<div class="form-group">
 							<label  for="nationality_company" id="nationality_text">Nationality of the Company</label>
 
-							 <?php
-								echo "<select id='nationality' name = 'nationality' >";
-								foreach($nationality_list as $row){
 
-									echo "<option ";
-									if($row->NATIONALITY_ID_PK == $_POST["nationality"]){ echo "selected "; }
-									echo " value = ";
-									echo $row->NATIONALITY_NAME;
-									echo "</option>";
-							}
-								echo "</select>";
-								?> <br>
+
+
+								 <?php
+
+			echo "<select class='employee_no' id='nationality_company' name = 'nationality' >";
+			foreach($nationality_list as $row){
+
+				echo "<option ";
+				if($row->NATIONALITY_ID_PK == $_POST["nationality"]){ echo "selected "; }
+				echo " value = ";
+				echo $row->NATIONALITY_ID_PK;
+				echo ">";
+				echo $row->NATIONALITY_NAME;
+				echo "</option>";
+			}
+			echo "</select>";
+			?> <br>
 						</div>
 
 						<div class="form-group">
@@ -107,9 +113,25 @@
 			           <input style="width:500px;margin-bottom:10px;" id="major_product" type="text" class="text_box2 form-control input-sm" >
 			           <span class="input-group-btn">
 			          		<input type = "button" id="btn_major_product" class=" btn btn-info btn-sm button_search" value = " Search "data-toggle="modal" data-target="#second_modal" />  </br>
+
 			         	</span>
 			         </div>
-			            <input style="width:500px;" id="major_product_result" type="text" class="text_box2 form-control input-sm" name = "major_product_result" value = "<?php echo $_POST["major_product_result"]; ?>" ><br>
+
+			         <div class="input-group">
+			            <input style="width:500px;margin-bottom:10px" id="major_product_result" type="text" class="text_box2 form-control input-sm" name = "major_product_result" value = "<?php echo $_POST["major_product_result"]; ?>" >
+			            <br>
+
+			        </div>
+
+
+
+
+
+
+
+
+			            <br>
+
 			       <div id="submit">
                     	<input  id="btn_register" type="submit" class="btn btn-info btn-lg button_submit" value="Submit" >
                     </div>
@@ -133,7 +155,7 @@
 
 					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					        <h4 style="font-size:30px;" class="modal-title" id="exampleModalLabel">Contact Person</h4>
-					        <div id="error_message" class="alert alert-warning sr-only" > </div>
+
 					      </div>
 					      <div style="float:left" class="modal-body">
 					      	<div id = "main_economic_activity" >
@@ -168,12 +190,22 @@
 					      <div class="modal-header">
 
 					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					        <h4 style="font-size:30px;" class="modal-title" id="exampleModalLabel">Contact Person</h4>
-					        <div id="error_message" class="alert alert-warning sr-only" > </div>
+					        <h4 style="font-size:30px;" class="modal-title" id="exampleModalLabel">Major Products/Goods:</h4>
+
 					      </div>
+
+					      <div class="input-group pull-left">
+      						<span class="input-group-addon">
+        					<input type="checkbox" value="Note in the List" >
+        						Not in the list ?
+        					<input type = "button" id="btn_new_products" class=" btn btn-info btn-sm button_search" value = "Create New" data-toggle="modal" data-target="#new_major_product_modal" />  </br>
+      						</span>
+
+    					</div><!-- /input-group -->
+
+
 					      <div style="float:left" class="modal-body">
 					      	<div id = "major_products" >
-								<h1>Main Economic Activity</h1>
 								<ul>
 								<?php
 									foreach($industry_list as $row){
@@ -185,7 +217,6 @@
 									}
 								?>
 								</ul>
-
 							</div>
 					     </div>
 					     <div class="modal-footer">
@@ -193,130 +224,54 @@
 						        <button id="major_products_ok" style="background-color:#19b5fe;color:white;font-size:15px;width:55px;height:32px;" type="button" class="btn btn-primary">OK</button>
 						</div>
 
+						<!--hidden input fields-->
+						<input type="hidden" name="major_products_id" id="major_products_id" value="" />
+
 					    </div>
 					  </div>
 				</div>
+
+				<!-- new_major_product_modal-->
+				<div class="modal fade" id="new_major_product_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					  <div class="modal-dialog">
+					    <div class="modal-content">
+					      <div class="modal-header">
+
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        <h4 style="font-size:30px;" class="modal-title" id="exampleModalLabel">New Custom Major Products / Goods</h4>
+
+					        <div id="frm_new_major_error" class="">
+				      			<div id="error_message" class="alert alert-danger sr-only" > </div>
+								<div id="success_message" class="alert alert-success sr-only" > </div>
+					      	</div>
+
+					      </div>
+					      <div style="float:left" class="modal-body">
+						      	<form id="frm_new_major_products" role="form" method="" action="<?php echo base_url(). 'test/get_default_id'; ?>" >
+									  <div class="form-group">
+									    <label for="txt_new_product">New Product Name</label>
+									    <input type="text" class="form-control" id="txt_new_product" placeholder="Enter email">
+									  </div>
+								</form>
+					     </div>
+					     <div class="modal-footer" style="clear:both">
+						        <button id="new_major_products_cancel" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						        <button id="new_major_products_ok" style="background-color:#19b5fe;color:white;font-size:15px;width:55px;height:32px;" type="button" class="btn btn-primary">OK</button>
+						</div>
+
+					    </div>
+					  </div>
+				</div>
+
+
 
 </div>
 
 
 <script>
-	$(document).ready(function(){
 
-		$business_nature_search = "";	// initialize this variable
-
-		$("#main_economic_activity").hide();	// hide the industry type generated by php
-
-		$("#btn_business_nature").click(function(){
-
-			if($("#business_nature").val() != ""){	// checks if search textfield is not empty
-
-				$("#major_products").hide();
-				$("#main_economic_activity").show();	// show the div of industry type
-				$("#main_economic_activity li").hide();	// hide the list items for the mean time
-				$business_nature_search = $("#business_nature").val();	// get the value of the search textfield
-				$("#business_nature").val("");	// reset the search textfield
-
-				for($a = 1; $a <= $("#main_economic_activity li").length; $a++){	// traverse each list items
-
-					$business_nature_search = $business_nature_search.toLowerCase();	// convert the search word to lower case
-					$content = $("#main_economic_activity #"+$a).html().toLowerCase();	// get the content of each list item and convert to lower case
-
-					if($content.search($business_nature_search) != -1){	// checks each list item content if contains the searched word
-
-						$("#main_economic_activity #"+$a).show();
-					}
-				}
-			}
-		});
-		$selected_result = "";
-		$("#main_economic_activity li").click(function(){
-
-			$("#main_economic_activity li").css("background-color","initial");
-			$(this).css("background-color","#4FC1E9");
-			$selected_result = $(this).html();
-			$selected_result = $selected_result.replace(/&amp;/g, "&");
-		});
-		$("#main_economic_activity_ok").click(function(){
-
-			if($selected_result != ""){
-
-				$("#business_nature_result").val($selected_result);
-				$selected_result = "";
-			}
-			$("#main_economic_activity li").css("background-color","initial");
-			$("#main_economic_activity").hide();
-			// @added
-			$('#main_economic_activity_cancel').trigger('click'); //to close the modal using the cancel button
-
-			//@here
-		});
-		$("#main_economic_activity_cancel").click(function(){
-
-			$("#main_economic_activity").hide();
-			$selected_result = "";
-		});
-
-		$major_product_search = "";	// initialize this variable
-
-		$("#major_products").hide();	// hide the industry type generated by php
-
-		$("#btn_major_product").click(function(){
-
-			if($("#major_product").val() != ""){	// checks if search textfield is not empty
-
-				$("#main_economic_activity").hide();
-				$("#major_products").show();	// show the div of industry list
-				$("#major_products li").hide();	// hide the list items for the mean time
-				$major_product_search = $("#major_product").val();	// get the value of the search textfield
-				$("#major_product").val("");	// reset the search textfield
-
-				for($a = 1; $a <= $("#major_products li").length; $a++){	// traverse each list items
-
-					$major_product_search = $major_product_search.toLowerCase();	// convert the search word to lower case
-					$content = $("#major_products #"+$a).html().toLowerCase();	// get the content of each list item and convert to lower case
-
-					if($content.search($major_product_search) != -1){	// checks each list item content if contains the searched word
-
-						$("#major_products #"+$a).show();
-					}
-				}
-			}
-		});
-		$selected_result = "";
-		$("#major_products li").click(function(){
-
-			$("#major_products li").css("background-color","initial");
-			$(this).css("background-color","#4FC1E9");
-			$selected_result = $(this).html();
-			$selected_result = $selected_result.replace(/&amp;/g, "&");
-		});
-		$("#major_products_ok").click(function(){
-
-			if($selected_result != ""){
-
-				$("#major_product_result").val($selected_result);
-				$selected_result = "";
-			}
-			$("#major_products li").css("background-color","initial");
-			$("#major_products").hide();
-			//@added to close the modal
-
-			$('#major_products_cancel').trigger('click'); //to close the modal using the cancel button
-
-
-
-
-		});
-		$("#major_products_cancel").click(function(){
-
-			$("#major_products").hide();
-			$selected_result = "";
-		});
-
-	});
 </script>
 
-			</div>
 	</div>
-	<!-- end of main body -->
+</div>
+<!-- end of main body -->

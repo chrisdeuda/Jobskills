@@ -64,16 +64,21 @@
 
 						<br/>
 						<div class="alert alert-warning"> Click "Add HR" to add Human Resource Manager </div>
-						<div id="hr1">
-							<h4><b>Hazel Maneja</b></h4>
-							<p id="hr-details">hazelmaneja@yahoo.com</p>
-							<p id="hr-details">094747474768</p>
-						</div><br/>
-						<div id="hr1">
-							<h4><b>Mic Fariscal</b></h4>
-							<p id="hr-details">michaelfariscal@yahoo.com</p>
-							<p id="hr-details">094747474767</p>
-						</div><br/>
+
+						<?php
+							if ( $hr_list == -1) {
+								echo "no hr found";
+							} else { ?>
+								<?php  $index = 0; foreach($hr_list as $list): ?>
+									<div id="hr1">
+										<h4><b> <?php echo $list->NAME; ?> </b></h4>
+										<p id="hr-details"><?php echo $list->EMAIL; ?></p>
+										<p id="hr-details"><?php echo $list->CONTACT_NO; ?></p>
+									</div><br/>
+
+								<?php $index++; endforeach;?>
+						<?php } ?>
+
 					</div>
 
 				</div>

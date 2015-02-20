@@ -185,16 +185,12 @@ class Api extends CI_Controller {
        }          
    }
        
-
    public function get_profile(){
        $user_id = $this->session->userdata('user_id');
-       $profile = $this->models_company_profile->get_profile( $user_id );
-       
-       
-         
-   
+       $profile = $this->models_company_profile->get_profile( $user_id );       
    }
        
+   
        
    
    

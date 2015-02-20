@@ -11,7 +11,7 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		//$this->load->view('welcome_message');
+
 		$this->initializePostVariables();	// initializes the post variables to be use as values of form input elements
 		$this->form_init();
 	}
@@ -31,6 +31,7 @@ class Welcome extends CI_Controller {
 		$template_data = $this->template->get_default_assets();
 		$template_data['css']['home'] = base_url().'stylesheet/home_section/home1.css';
 		$template_data['css']['registration'] = base_url().'public/css/company_registration_section/company_registration.css';
+		$template_data['js']['registration_validation'] = base_url().'public/js/registration/company_registration_display.js';
 		$template_data['title'] = "Company Registration";
 
 
@@ -57,15 +58,15 @@ class Welcome extends CI_Controller {
 
 		if($this->form_validation->run()){
 
-			echo "pass";
-			$this->securePass();	// converts the password into md5
-			$this->convertStringToInt($_POST["nationality"]);	// converts the string type select tag nationality from form_registration into integer
-			$this->getIndustryID();
+                    echo "pass";
+                    $this->securePass();	// converts the password into md5
+                    $this->convertStringToInt($_POST["nationality"]);	// converts the string type select tag nationality from form_registration into integer
+                    $this->getIndustryID();
 
-			$this->load->model("model_db");
-			$this->model_db->register();
+                    $this->load->model("model_db");
+                    $this->model_db->register();
 
-			header('location:'. base_url(). 'site/default_login');
+                    header('location:'. base_url(). 'site/default_login');
 		}
 		else{
 

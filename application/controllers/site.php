@@ -213,6 +213,7 @@ class Site extends CI_Controller {
             $this->load->model('models_company_profile');
             $user_id = $this->session->userdata('user_id');
             $company_profile['profile'] = $this->models_company_profile->get_profile( $user_id );
+            $company_profile['hr_list'] = $this->models_company_profile->get_all_hr( $user_id );
 
             $data = $this->template->get_default_assets();
             //$data['css']['home'] = base_url().'stylesheet/home_section/home1.css';

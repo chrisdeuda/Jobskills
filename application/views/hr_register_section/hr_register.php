@@ -31,7 +31,6 @@
 							</div>
 							<br>
 							<div>
-
 								<button class="insert_button btn-lg">INSERT LOGO</button>
 							</div>
 							</center>

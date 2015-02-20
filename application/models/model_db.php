@@ -10,7 +10,7 @@ class Model_DB extends CI_Model{
     }
     public function getIndustryType(){
 
-        $query = $this->db->query("SELECT * FROM industry_type");
+        $query = $this->db->query("SELECT * FROM industry_type WHERE INDUSTRY_NAME != 'CUSTOMIZE' ");
 
         return $query->result();
     }
@@ -47,7 +47,7 @@ class Model_DB extends CI_Model{
     public function register(){
 
         $this->inCompanyList();
-
+        $major_product_id = $this->getIndustryListId( strtoupper($_POST["major_product_result"]) );
         $new_row = array(
 
             "COMPANY_ID_FK" => $this->getCompanyListID(),
@@ -57,17 +57,33 @@ class Model_DB extends CI_Model{
             "MOBILE_NO" => $_POST["telephone_no"],
             "FAX_NO" => $_POST["telephone_no"],
             "EMPLOYEES_NO" => $_POST["employee_no"],
+            "INDUSTRY_LIST_ID_FK" => $major_product_id,
             "INDUSTRY_TYPE_FK" => $_POST["business_nature_result"],
             "NATIONALITY_FK" => $_POST["nationality"]
         );
         $new_row_login = array(
-
             "USER_ID_FK" => $this->getCompanyListID(),
             "USERNAME" => $_POST["username"],
-            "PASSWORD" => $_POST["password"],
+            "PASSWORD" => md5($_POST["password"]),
             "USER_TYPE_ID_FK" => 1
         );
         $this->db->insert("company_profile", $new_row);
         $this->db->insert("login", $new_row_login);
+    }
+    
+    function getIndustryListId( $industry_list_name ){
+        $name = strtoupper($industry_list_name);
+        
+        $sql = "SELECT `INDUSTRY_LIST_ID` FROM `industry_list`"
+            . " WHERE `INDUSTRY_LIST_NAME` = '{$name}'";
+            
+        $query = $this->db->query( $sql );
+
+        $result = $query->result_array();
+        
+        foreach( $result as $row){
+            return $row['INDUSTRY_LIST_ID'];            
+        }
+
     }
 }
