@@ -36,7 +36,7 @@
                                         <ul class="sub_menu_login dropdown-menu" role="menu">
                                             <?php
                                                 if (  $this->session->userdata('is_logged_in')  == true ) { ?>
-                                                <li ><a  href="<?php echo base_url().'login/logout_user'; ?>">Logout   </a></li>
+                                                    <li ><a  href="<?php echo base_url().'login/logout_user'; ?>">Logout   </a></li>
 
                                             <?php
                                                 } else { ?>

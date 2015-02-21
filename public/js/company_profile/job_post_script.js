@@ -1,4 +1,10 @@
 $(document).ready(function(){
+     $job_title             = $("#job_title");
+     $new_job_title         = $('#new_job_post_title');
+     $new_job_post_title_id = $('#new_job_post_title_id');
+     $skills_need_count     = $('#skills_need_count');
+     $description           = $("#requirements_description");
+
 
      $Form = {
         init: function(){
@@ -12,28 +18,44 @@ $(document).ready(function(){
                 $Form.saveFormValues();
                 console.log('Saving Form Values');
             });
+
+           $job_title.change(function() {
+
+                if ( $job_title.val() == 0 ) {
+                    $new_job_title.removeClass('sr-only');
+                     $job_title.prop('disabled', 'disabled');
+                } else {
+
+                }
+            });
+
+           $new_job_title.blur(function(){
+                $Form.saveNewTitleRequest( $new_job_title.val(), $new_job_title.attr('data-sendurl')  );
+           });
+
         },
 
          // Testing Area for Developing Function
         // =====================================================================
-
-
         saveFormValues: function( ){
-            var job_title = $('#job_title').val();
-            var description = $("#requirements_description").val();
-            var skills_need_count = $('#skills_need_count').val();
-            var url = $('#myForm').attr('action');;
+            var job_title           = $job_title.val();
+            var description         = $description.val();
+            var skills_need_count   = $skills_need_count.val();
+            var new_job_title       = $new_job_title.val();
+            var new_job_post_title_id = $new_job_post_title_id.val();
+            var url                 = $('#myForm').attr('action');;
 
             postData = {
                 "job_title": job_title,
                 "description": description,
-                "skills_need_count" : skills_need_count
+                "skills_need_count" : skills_need_count,
+                "new_job_title" : new_job_title,
+                "new_job_post_title_id" :new_job_post_title_id
             };
 
             $.post( url , postData, function(o){
              if ((o.result) == 1){
                 $Form.successAlert( "<p>New Job Post Added</p>" );
-                //window.location = "http://localhost/hazelnew/site/default_company_profile";
 
              } else {
                 $Form.errorAlert();
@@ -41,7 +63,6 @@ $(document).ready(function(){
                 msg += "<ul>";
                 for (var key in o.error) {
                     msg += "<li>"+ o.error[key]+ "</li>";
-                    //console.log("Key: " + key);
                 }
 
                 msg += "</ul>";
@@ -51,6 +72,32 @@ $(document).ready(function(){
            }, 'json');
         },
 
+        saveNewTitleRequest: function( the_title, $url ){
+
+            var postData = {
+                "new_job_title" : the_title
+
+            };
+
+             $.post( $url , postData, function(o){
+             if ((o.result) == 1){
+                $Form.successAlert( "<p>New Job Title Added</p>" );
+                $new_job_post_title_id.val( o.ID);
+
+             } else if ((o.result) == 0) {
+                var msg = "<p>" + o.error+ "</p>";
+                $new_job_post_title_id.val( o.ID);
+                $Form.errorAlert( msg  );
+
+             } else {   //database error
+                var msg = "<p>" + o.error+ "</p>";
+                $Form.errorAlert( msg  );
+
+             }
+           }, 'json');
+
+
+        },
 
 
         // Processing Form Values
@@ -79,7 +126,7 @@ $(document).ready(function(){
             dom = $error_message;
 
             if ( typeof msg === 'undefined'){
-                console.log( 'Undefine msg');
+                dom.html( msg );
             } else {
                 dom.html( msg );
             }
@@ -135,8 +182,10 @@ $(document).ready(function(){
              if ((o.result) == 1){
                 for(key = 0; key < o.data.length; key++){
                     print = $Form.addOption( o.data[key].ID ,o.data[key].SKILL_NAME );
-                    $job_title.prepend( print );
+                    $job_title.append( print );
                 }
+                print = $Form.addOption( 0 , "OTHERS" );
+                $job_title.append( print );
              } else {
                 console.log(o.error);
 

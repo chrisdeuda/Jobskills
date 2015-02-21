@@ -153,6 +153,7 @@ class Site extends CI_Controller {
 		//$this->output->enable_profiler(true);
 		$data = $this->template->get_default_assets();
 		$data['css']['home'] = base_url().'stylesheet/home_section/home1.css';
+		$data['title'] = "Home";
 
 		$this->load->view('template_default/inc_header',$data);
 		$this->load->view('template_default/home');

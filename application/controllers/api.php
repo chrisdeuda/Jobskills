@@ -32,7 +32,15 @@ class Api extends CI_Controller {
    }
    
 // ----------------------------------------------------------------------------
-   
+   /**
+    * @Add 
+    * - Check if user click the OTHER value in drop down
+    * - if yes get the value of new title
+    *       check if it is already in the database
+    *       if yes use the current result id to save it to database
+    *       else save it into the job_list and get the id
+    *           to be save in the company_job_vacancy
+    */
    public function save_survey_form(){
        $this->load->library("form_validation");
        
@@ -49,19 +57,28 @@ class Api extends CI_Controller {
                ]));
        } else {
            $company_id = $this->session->userdata('user_id');
+           $job_title_id = $this->input->post('job_title');
+           $skill_needed_count = $this->input->post('skills_need_count');
+           $description = $this->input->post('description');
+           $new_job_post_title_id = $this->input->post('new_job_post_title_id');
+           
            $data = array(
-                'COMPANY_ID_FK' => $company_id,
-                'SKILL_ID_FK' => $this->input->post('job_title'),
-                'MANPOWER_NO' => $this->input->post('skills_need_count'),
-                'REQUIREMENT_DESCRIPTION' => $this->input->post('description')
-             );
+                     'COMPANY_ID_FK' => $company_id,
+                     'SKILL_ID_FK' => $job_title_id,
+                     'MANPOWER_NO' => $skill_needed_count,
+                     'REQUIREMENT_DESCRIPTION' => $description
+                  );
+           
+           if ($job_title_id == 0 ) {
+               $data['SKILL_ID_FK'] = $new_job_post_title_id; 
+           } 
+           
             $post_id =  $this->db->insert('company_vacancy_position', $data);
             $this->output->set_output(
                      json_encode([
                          'result' =>1 ,
                         'ID' => $post_id
                     ]));
-           
        }       
     }
     
@@ -142,7 +159,6 @@ class Api extends CI_Controller {
     }
        
 // -----------------------------------------------------------------------------
-
    public function add_hr(){
        
        $this->load->library("form_validation");
@@ -185,14 +201,61 @@ class Api extends CI_Controller {
        }          
    }
        
+// -----------------------------------------------------------------------------
    public function get_profile(){
        $user_id = $this->session->userdata('user_id');
        $profile = $this->models_company_profile->get_profile( $user_id );       
    }
        
-   
+// -----------------------------------------------------------------------------
+   public function insert_new_job_title(){
        
-   
+       $new_job_title = strtoupper( $this->input->post('new_job_title'));
+       
+       $SQL = "SELECT `SKILL_ID_PK` FROM `skills_type` WHERE `SKILL_NAME` = {'$new_job_title'}  ";
+       
+       $data = array ( "SKILL_NAME"=> $new_job_title );
+       
+       $this->db->select('SKILL_ID_PK');
+       $query = $this->db->get_where('skills_type', $data );
+       
+       $this->output->set_content_type('application_json');
+       
+       if ( $query->num_rows() <= 0) {
+           
+           $insert_status = $this->db->insert('skills_type', $data);
+           
+           if ( $insert_status == FALSE ) {
+               $this->output->set_output(
+                     json_encode([
+                        'result' => -1  ,
+                        'error' => "Unable To insert new Title"
+                    ]));
+               
+           } else {
+               $skill_id = $this->db->insert_id();
+               $this->output->set_output(
+                     json_encode([
+                         'result' => 1  ,
+                        'ID' => $skill_id,
+                         'message' => "New Job Title has been added "
+                    ]));
+           }
+       } else {
+           $result = $query->result();
+           foreach( $result as $row){
+              $this->output->set_output(
+                  json_encode([
+                  'result' => 0  ,
+                  'ID' => $row->SKILL_ID_PK,
+                  'error' => "'$new_job_title', Already Exists in the Records"
+                      
+              ]));
+           }
+       }
+   }
+       
+// -----------------------------------------------------------------------------
    
    
 

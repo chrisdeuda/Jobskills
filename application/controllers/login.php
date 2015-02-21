@@ -33,19 +33,19 @@ class Login extends CI_Controller {
 
         } else {
 
-            $this->save_logged_in( $user_id);
+            
             $user_type = $this->models_login->get_user_type($user_id);
+            $this->save_logged_in( $user_id, $user_type );
 
-            //HR
-
-            if ( $user_type == 2) {
+            
+            if ( $user_type == 2) { //admin
                 $data = ['status' => true,
                 'message' => "ok",
                 'forward_url' => base_url(). 'admin/manage_survey',
                 ];
                 echo json_encode($data);
 
-            } else if ( $user_type == 1) { //admin
+            } else if ( $user_type == 1) { //hr
                 $data = ['status' => true,
                 'message' => "ok",
                 'forward_url' => base_url(). 'site/default_company_profile',
@@ -64,12 +64,13 @@ class Login extends CI_Controller {
      * @param type $user_id - current user login
      * @return void
      */
-    public function save_logged_in($user_id){
+    public function save_logged_in($user_id , $user_type ){
         $data = array(
                     "user_id"  => $user_id,
-                    "is_logged_in" => 1
+                    "is_logged_in" => 1,
+                    "user_type" =>$user_type
 		);
-        $this->session->set_userdata( $data);
+        $this->session->set_userdata( $data );
 
     }
 // -----------------------------------------------------------------------------

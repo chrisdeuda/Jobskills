@@ -1,4 +1,5 @@
 <br>
+	<!--required files : public/js/company_profile/job_post_script.js -->
 	<!-- Main Content-->
 	<div id="main_container">
 
@@ -16,10 +17,18 @@
 							<div id="success_message" class="alert alert-success sr-only" > </div>
 
 								<label for="service_offered" id="text1">Title/Position</label>
-			  					<select id="job_title" class="position" id="skills" >
+			  					<select id="job_title" class="position pull-right" id="skills" >
 
 								</select>
+
+
 							</div>
+
+							<div class="form-group"><br>
+								<input id= "new_job_post_title" type="text" name="new_job_post_title" value=""  class="position pull-right sr-only" style="margin-right:10px;" data-sendurl="<?php echo base_url().'api/insert_new_job_title'; ?>" />
+								<input id="new_job_post_title_id" type="hidden" name="new_job_post_title_id" value="" />
+							</div>
+
 
 							<div class="form-group">
 								<label for="people_needed" for="skills_need_count" id="no_people_text">No. of People Needed</label>
@@ -28,6 +37,7 @@
 										for ($index = 5; $index < 200; $index = $index + 5) {
 											echo "<option value=". $index.">".$index."</option>";
 										}
+
 									?>
 								</select>
 							</div> <br>
