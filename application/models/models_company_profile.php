@@ -43,13 +43,23 @@ class Models_Company_Profile extends MY_Model{
        }
    }
 
+    public function get_all_job_vacancy( $company_id){
+        $sql = " SELECT `JOB_POST_ID_PK` as JOB_POST_ID , `COMPANY_ID_FK`, "
+                     . "(SELECT `SKILL_NAME` FROM `skills_type` WHERE `SKILL_ID_PK` = `SKILL_ID_FK`)as SKILL_NAME , "
+                . "	`MANPOWER_NO` , "
+                . "     `REQUIREMENT_DESCRIPTION` as DESCRIPTION"
+                . " FROM `company_vacancy_position` "
+                . " WHERE `COMPANY_ID_FK` = '{$company_id}'";
 
 
-
-
-
-
-
+       $query = $this->db->query( $sql );
+       if ( $query->num_rows() <= 0) {
+           return -1;
+       }  else {
+           $result = $query->result();
+           return $result;
+       }
+    }
 
 }
 

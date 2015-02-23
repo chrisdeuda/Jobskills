@@ -206,6 +206,16 @@ class Api extends CI_Controller {
        $user_id = $this->session->userdata('user_id');
        $profile = $this->models_company_profile->get_profile( $user_id );       
    }
+
+// -----------------------------------------------------------------------------
+   public function get_job_post(){
+       $user_id = $this->session->userdata('user_id');
+       $this->models_company_profile->get_all_job_vacancy( $user_id );
+       
+       
+       
+   }
+   
        
 // -----------------------------------------------------------------------------
    public function insert_new_job_title(){

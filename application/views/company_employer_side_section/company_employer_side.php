@@ -95,14 +95,29 @@
 						</div> -->
 						<br/>
 						<div class="alert alert-warning"> Click "POST JOB" to add jobs in your profile. </div>
-						<div id="po-jb">
-							<h3><b>Computer Skills<b><h3>
-							<p id="jb-details"><b>Required:</b> C++ Programmer, PHP Programmer, Database Manager, Encoder, Adobe Photoshop Proficient </p>
-							<p id="jb-details"><b>Educational Background:</b> College Graduate </p>
-							<p id="jb-details"><b>Work Experience:</b> At least two (2) Years <p>
-							<p id="jb-details"><b>Certificates:</b> NCII, Microsoft Specialist </p>
 
-						</div>
+						<?php
+							if ( $job_post == -1) {
+								echo "no job post found";
+							} else { ?>
+								<?php  $index = 0; foreach($job_post as $post): ?>
+								<div id="po-jb">
+									<div id ="<?php echo $post->JOB_POST_ID; ?><">
+										<h3><b><?php echo $post->SKILL_NAME; ?><b><h3>
+											<p id="jb-details"><b>No. of Needed Person:</b><?php echo $post->MANPOWER_NO; ?>  </p>
+											<p id="jb-details"><b>Requirement / Skill:</b><?php echo $post->DESCRIPTION; ?><p>
+									</div>
+
+								</div>
+								<?php $index++; endforeach;?>
+						<?php } ?>
+
+
+
+
+
+
+
 					</div>
 				</div>
 			</div> <!-- row -->

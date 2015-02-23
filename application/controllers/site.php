@@ -215,9 +215,10 @@ class Site extends CI_Controller {
             $user_id = $this->session->userdata('user_id');
             $company_profile['profile'] = $this->models_company_profile->get_profile( $user_id );
             $company_profile['hr_list'] = $this->models_company_profile->get_all_hr( $user_id );
+            $company_profile['job_post'] = $this->models_company_profile->get_all_job_vacancy( $user_id );
 
             $data = $this->template->get_default_assets();
-            //$data['css']['home'] = base_url().'stylesheet/home_section/home1.css';
+            
             $data['css']['registration'] = base_url().'public/css/company_employer_side_section/company_employer_side.css';
             $data['js']['add_hr'] = base_url().'public/js/company_profile/add_hr_script.js';
 
