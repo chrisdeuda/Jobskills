@@ -7,6 +7,7 @@ class Api extends CI_Controller {
        $this->load->library('template');
        $this->load->model('models_console');
        $this->load->model('models_company_profile');
+       $this->load->model('models_survey_statistics');
    }
 // -----------------------------------------------------------------------------
    
@@ -56,9 +57,9 @@ class Api extends CI_Controller {
                     'error' => $this->form_validation->error_array()
                ]));
        } else {
-           $company_id = $this->session->userdata('user_id');
-           $job_title_id = $this->input->post('job_title');
-           $skill_needed_count = $this->input->post('skills_need_count');
+           $company_id          = $this->session->userdata('user_id');
+           $job_title_id        = $this->input->post('job_title');
+           $skill_needed_count  = $this->input->post('skills_need_count');
            $description = $this->input->post('description');
            $new_job_post_title_id = $this->input->post('new_job_post_title_id');
            
@@ -84,42 +85,31 @@ class Api extends CI_Controller {
     
 // -----------------------------------------------------------------------------
     public function update_survey_statistics(){
-        $sql = "SELECT `SKILL_ID_FK` as ID  FROM  `survey_statistics`";
-        $query = $this->db->query( $sql);
+        $clear_list     =   $this->models_survey_statistics->clearSurveyList();
+        $retrive_list   =   $this->models_survey_statistics->getSkillList();
+        
+        $survey_record_query = $this->models_survey_statistics->getSurveyRecord();
         
         $this->output->set_content_type('application_json');
         
-        if ( $query->num_rows == 0) {
+        if ( $survey_record_query->num_rows == 0) {
             $this->output->set_output(
                      json_encode([
-                         'result' => 0 ,
+                        'result' => 0 ,
                         'error' => "Unable To update"
                     ]));
         } else {
-            $result = $query->result() ;
+            $result = $survey_record_query->result() ;
             
             foreach( $result as $rows ){    
-                $sql_update = "UPDATE `survey_statistics` SET SURVEY_TOTAL = ( SELECT SUM( `MANPOWER_NO` ) AS total"
-                                    . " FROM `company_vacancy_position`"
-                                    . " WHERE `SKILL_ID_FK` = {$rows->ID} )" 
-                    /**. " IN ("
-                        . " SELECT `SKILL_ID_PK`"
-                        . " FROM `skills_type`"
-                        . " WHERE `SKILL_ID_PK` = {$rows->ID}"
-                        . " ) )" **/
-                            . " WHERE `SKILL_ID_FK` = {$rows->ID}";
-                    
-                 $update_query = $this->db->query( $sql_update );
+                $update_records = $this->models_survey_statistics->updateSurveyRecord($rows->ID);
             }
-            
             $this->output->set_output(
                      json_encode([
-                         'result' =>1 ,
+                        'result' =>1 ,
                         'data' => "The Survey Statistics has been updated !"
                     ]));
             
-            
-//            $this->get_survey_statistic();
         }
     }
        

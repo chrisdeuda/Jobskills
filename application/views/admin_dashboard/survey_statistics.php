@@ -5,7 +5,7 @@
         <div id="error_message" class="alert alert-danger sr-only" style="width:900px; margin:auto;" ></div>
 
         <div style="margin:auto; width:700px;">
-          <button id="testme1"> TestMe</button>
+
           <table class="table table-bordered table-condensed table-hover">
             <thead >
               <tr>
@@ -14,7 +14,7 @@
                 <th style="width:5%">No. of  Peeple Needed</th>
               </tr>
             </thead>
-            <tbody id="survey_result">
+            <tbody id="survey_result"  data-sendurl="<?php echo base_url().'api/get_survey_statistic'; ?>" >
               <!-- dynamic data will goes here-->
           </table>
 

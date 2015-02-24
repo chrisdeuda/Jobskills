@@ -17,15 +17,7 @@ $(document).ready(function(){
                 $Form.send_update_survey_request( this);
             });
 
-            $('#testme').bind('click',function(e){
-                e.preventDefault();
-            });
 
-           $('#testme1').click(function(evt){
-                evt.preventDefault();
-                alert('sdf');
-
-            });
         },
 
          // Testing Area for Developing Function
@@ -41,7 +33,7 @@ $(document).ready(function(){
 
 // -----------------------------------------------------------------------------
         displayStatistic: function( index , job_name, total_number){
-            output = '';
+            var output = '';
             output += "<tr>";
             output += "<td>"+ index + "</td>";
             output += "<td>"+ job_name+ "</td>";
@@ -52,12 +44,12 @@ $(document).ready(function(){
         },
 
         errorAlert: function( msg ){
-            $success_message = $('#success_message');
+            var $success_message = $('#success_message');
             $success_message.addClass('sr-only');
-            $error_message = $('#error_message');
+            var $error_message = $('#error_message');
             $error_message.removeClass('sr-only');
 
-            dom = $error_message;
+            var dom = $error_message;
 
             if ( typeof msg === 'undefined'){
                 console.log( 'Undefine msg');
@@ -77,11 +69,11 @@ $(document).ready(function(){
         },
 
         successAlert: function( msg  ){
-            $success_message = $('#success_message');
+            var $success_message = $('#success_message');
             $success_message.removeClass('sr-only');
 
-            $error_message = $('#error_message');
-            $error_message.addClass('sr-only');
+            var $error_message = $('#error_message');
+             $error_message.addClass('sr-only');
 
             dom = $success_message;
 
@@ -107,15 +99,14 @@ $(document).ready(function(){
 
 // -----------------------------------------------------------------------------
         send_get_skill_request: function() {
-          var url = 'http://localhost/hazelnew/api/get_survey_statistic';
           var postData = { "request" : 1};
-
           var dom = $('#survey_result');
+          var url = dom.attr('data-sendurl');
 
            $.post( url , postData, function(o){
              if ((o.result) == 1){
 
-                console.log("Display Survey Result");
+                console.log("Displayed Survey Result");
                 dom.empty();
                 for(key = 0; key < o.data.length; key++){
                     print = $Form.displayStatistic( (key + 1), o.data[key].NAME ,o.data[key].TOTAL );
